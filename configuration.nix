@@ -9,8 +9,6 @@
     [ 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # Include rewrapped qtile package to allow qtile on Wayland
-      ./qtile.nix # remove after updating to 24.11
       # home manager
       <home-manager/nixos>
     ];
@@ -72,13 +70,18 @@
     enable = true;
     dpi = 220;
     displayManager.lightdm.enable = true;
-    windowManager.qtile.enable = true;
     xkb = {
       layout = "us";
       variant = "";
       options = "caps:swapescape";
     };
   };
+
+  # Enable hyprland
+  programs.hyprland.enable = true;
+
+  # Have Electron apps use Wayland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
@@ -93,11 +96,8 @@
     home.packages = with pkgs; [qutebrowser joshuto ripgrep bat];
     programs.fish.enable = true;
 
-    home.file.qtile_config = {
-      source = ./qtile;
-      target = ".config/qtile/config.py";
-      recursive = true;
-    };
+    # enable Hyprland module
+    wayland.windowManager.hyprland.enable = true;
 
     # state version is required and should stay at the initial version
     home.stateVersion = "24.05";
