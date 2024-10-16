@@ -95,6 +95,7 @@
   home-manager.users.zack = { pkgs, ... }: {
     home.packages = with pkgs; [qutebrowser joshuto ripgrep bat];
     programs.fish.enable = true;
+    programs.kitty.enable = true;
 
     # enable Hyprland module
     wayland.windowManager.hyprland.enable = true;
