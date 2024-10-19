@@ -85,6 +85,7 @@
     # };
   };
   programs.regreet.enable = true;
+  programs.regreet.settings.GTK.application_prefer_dark_theme = true;
 
   # Enable hyprland
   programs.hyprland.enable = true;
