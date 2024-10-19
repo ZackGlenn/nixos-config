@@ -69,13 +69,22 @@
   services.xserver = {
     enable = true;
     dpi = 220;
-    displayManager.lightdm.enable = true;
     xkb = {
       layout = "us";
       variant = "";
       options = "caps:swapescape";
     };
   };
+
+  # Enable greetd and  ReGreet
+  services.greetd = {
+    enable = true;
+    # settings.default_session = {
+    #   command = "Hyprland";
+    #   user = "zack";
+    # };
+  };
+  programs.regreet.enable = true;
 
   # Enable hyprland
   programs.hyprland.enable = true;
@@ -97,8 +106,9 @@
     programs.fish.enable = true;
     programs.kitty.enable = true;
 
-    # enable Hyprland module
+    # Configure hyprland
     wayland.windowManager.hyprland.enable = true;
+    wayland.windowManager.hyprland.settings = import ./hyprland.nix;
 
     # state version is required and should stay at the initial version
     home.stateVersion = "24.05";
