@@ -111,6 +111,9 @@
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.settings = import ./hyprland.nix;
 
+    # Configure kitty
+    programs.kitty.settings.confirm_os_window_close = 0;
+
     # state version is required and should stay at the initial version
     home.stateVersion = "24.05";
   };
