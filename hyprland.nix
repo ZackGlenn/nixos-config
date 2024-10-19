@@ -156,16 +156,23 @@ bind = [
   "$mainMod, W, killactive,"
   "$mainMod, M, exit,"
   "$mainMod, E, exec, $fileManager"
+  "$mainMod, B, exec, $browser"
   "$mainMod, V, togglefloating,"
   "$mainMod, R, exec, $menu"
   "$mainMod, P, pseudo," # dwindle
-  "$mainMod, J, togglesplit," # dwindle
+  "$mainMod, T, togglesplit," # dwindle
 
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"
   "$mainMod, right, movefocus, r"
   "$mainMod, up, movefocus, u"
   "$mainMod, down, movefocus, d"
+
+  # Move focus with mainMod + hjkl
+  "$mainMod, H, movefocus, l"
+  "$mainMod, L, movefocus, r"
+  "$mainMod, K, movefocus, u"
+  "$mainMod, J, movefocus, d"
 
   # Switch workspasces with mainMod + [0-9]
   "$mainMod, 1, workspace, 1"
