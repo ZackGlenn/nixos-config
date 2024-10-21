@@ -1,4 +1,5 @@
 {
+
 ################
 ### MONITORS ###
 ################
@@ -16,8 +17,9 @@ monitor = ", preferred, auto, auto";
 # Set programs that you use
 
 "$terminal" = "kitty";
-"$fileManager" = "pcmanfm";
+"$fileManager" = "kitty joshuto";
 "$browser" = "qutebrowser";
+"$menu" = "tofi-drun --drun-launch=true";
 
 
 #################
@@ -29,6 +31,7 @@ monitor = ", preferred, auto, auto";
 
 exec-once = [
   "nm-applet &"
+  "lxqt-policykit-agent"
   "$terminal"
 ];
 
