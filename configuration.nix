@@ -36,13 +36,12 @@
   # Disable mac address randomization
   networking.networkmanager.wifi.scanRandMacAddress = false;
 
-  # Enable bluetooth and blueman
+  # Enable bluetooth
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
     input.General.ClassicBondedOnly = false;
   };
-  services.blueman.enable = true;
 
   # Enable pipewire
   services.pipewire.enable = true;
@@ -103,9 +102,21 @@
 
   # Home manager config
   home-manager.users.zack = { pkgs, ... }: {
-    home.packages = with pkgs; [qutebrowser joshuto ripgrep bat];
+    home.packages = with pkgs; [
+      qutebrowser
+      joshuto
+      ripgrep
+      bat
+      lxqt.lxqt-policykit
+      clipse
+      overskride
+      brightnessctl
+    ];
     programs.fish.enable = true;
     programs.kitty.enable = true;
+    programs.wofi.enable = true;
+    services.dunst.enable = true;
+    services.playerctld.enable = true;
 
     # Configure hyprland
     wayland.windowManager.hyprland.enable = true;
