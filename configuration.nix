@@ -106,6 +106,7 @@
       bat
       ripgrep
       joshuto
+      qutebrowser
       fish
       lxqt.lxqt-policykit
       clipse
