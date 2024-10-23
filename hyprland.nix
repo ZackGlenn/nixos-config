@@ -19,7 +19,7 @@ monitor = ", preferred, auto, auto";
 "$terminal" = "kitty";
 "$fileManager" = "kitty joshuto";
 "$browser" = "qutebrowser";
-"$menu" = "tofi-drun | xargs hyprctl dispatcher exec";
+"$menu" = "tofi-drun | xargs hyprctl dispatcher exec --";
 
 
 #################
