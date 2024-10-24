@@ -45,9 +45,11 @@
     powerOnBoot = true;
     input.General.ClassicBondedOnly = false;
   };
+  services.blueman.enable = true;
 
   # Enable pipewire
   services.pipewire.enable = true;
+  services.pipewire.pulse.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Denver";

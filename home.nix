@@ -9,8 +9,8 @@
     fish
     lxqt.lxqt-policykit
     clipse
-    overskride
     brightnessctl
+    pavucontrol
   ];
 
   programs.kitty = {
