@@ -29,7 +29,10 @@
     vimAlias = true;
     vimdiffAlias = true;
 
-    extraLuaConfig = "${builtins.readFile ./nvim/options.lua}";
+    extraLuaConfig = "${builtins.readFile ./nvim/init.lua}";
+
+    plugins = with pkgs.vimPlugins; [
+    ];
   };
 
   services.dunst.enable = true;
