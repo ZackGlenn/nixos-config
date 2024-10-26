@@ -23,6 +23,15 @@
     settings.terminal = "kitty";
   };
 
+  program.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+
+    extraLuaConfig = "${builtins.readFile ./nvim/options.lua}";
+  };
+
   services.dunst.enable = true;
   services.playerctld.enable = true;
 
