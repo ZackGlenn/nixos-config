@@ -23,7 +23,7 @@
     settings.terminal = "kitty";
   };
 
-  program.neovim = {
+  programs.neovim = {
     enable = true;
     viAlias = true;
     vimAlias = true;
