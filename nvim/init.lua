@@ -134,7 +134,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
  }
 
 -- Useful plugin to show you pending keybinds.
-require('folke/which-key.nvim').setup {
+require('which-key').setup {
   icons = {
     -- set icon mappings to true if you have a Nerd Font
     mappings = vim.g.have_nerd_font,
@@ -185,7 +185,7 @@ require('folke/which-key.nvim').setup {
 }
 
  -- Autoformat
-require('stevearc/conform.nvim').setup {
+require('conform').setup {
   notify_on_error = false,
   format_on_save = function(bufnr)
     -- Disable "format_on_save lsp_fallback" for languages that don't
@@ -210,8 +210,8 @@ require('stevearc/conform.nvim').setup {
     --
     -- You can use 'stop_after_first' to run the first available formatter from the list
     -- javascript = { "prettierd", "prettier", stop_after_first = true },
-  },
-},
+  }
+}
 
 -- Highlight todo, notes, etc in comments
 require('todo-comments').setup {
@@ -229,7 +229,7 @@ require('nvim-treesitter').setup {
     additional_vim_regex_highlighting = { 'ruby' },
   },
   indent = { enable = true, disable = { 'ruby' } },
-},
+}
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
