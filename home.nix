@@ -32,6 +32,39 @@
     extraLuaConfig = "${builtins.readFile ./nvim/init.lua}";
 
     plugins = with pkgs.vimPlugins; [
+      vim-sleuth
+      gitsigns-nvim
+      which-key-nvim
+      neodev-nvim
+      nvim-lspconfig
+      conform-nvim
+      nvim-cmp
+      tokyonight-nvim
+      todo-comments-nvim
+      mini-nvim
+      plenary-nvim
+      telescope-fzf-native-nvim
+      telescope-ui-select-nvim
+      cmp-nvim-lsp
+      fidget-nvim
+      luasnip
+      cmp_luasnip
+      cmp-nvim-lsp
+      cmp-path
+
+      (nvim-treesitter.withPlugins (p: [
+        p.nix
+	p.lua
+	p.rust
+	p.python
+	p.julia
+	p.cpp
+        p.bash
+	p.fish
+	p.toml
+	p.yaml
+	p.json
+      ]))
     ];
   };
 
