@@ -10,7 +10,13 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # home manager
-      inputs.home-manager.nixosModules.default
+      inputs.home-manager.nixosModules.default {
+        home-manager.extraSpecialArgs = {
+          pkgs-unstable = import inputs.nixpkgs-unstable {
+            system = pkgs.system;
+          };
+        };
+      }
     ];
 
   # Enable flakes
@@ -118,10 +124,6 @@
     neovim
     kitty
   ];
-
-  # enable neovim
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
 
   # enable git and lazygit
   programs.git.enable = true;

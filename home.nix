@@ -1,5 +1,5 @@
   # Home manager config
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, inputs, ... }:
 {
   home.packages = with pkgs; [
     bat
@@ -25,6 +25,7 @@
 
   programs.neovim = {
     enable = true;
+    package = pkgs-unstable.neovim-unwrapped;
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
@@ -65,6 +66,13 @@
 	p.yaml
 	p.json
       ]))
+    ];
+
+    extraPackages = with pkgs; [
+      lua-language-server
+      stylua
+      rust-analyzer
+      pyright
     ];
   };
 
