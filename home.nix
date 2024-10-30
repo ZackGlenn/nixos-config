@@ -53,6 +53,8 @@
       cmp-nvim-lsp
       cmp-path
 
+      pkgs-unstable.vimPlugins.lazydev-nvim
+
       (nvim-treesitter.withPlugins (p: [
         p.nix
 	p.lua
