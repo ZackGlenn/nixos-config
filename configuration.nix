@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{pkgs, inputs, ... }:
 
 {
   imports =
@@ -108,7 +108,6 @@
     isNormalUser = true;
     description = "Zack Glenn";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
   # Home manager config

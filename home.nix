@@ -1,5 +1,5 @@
   # Home manager config
-{ pkgs, pkgs-unstable, inputs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 {
   home.packages = with pkgs; [
     bat
@@ -36,7 +36,6 @@
       vim-sleuth
       gitsigns-nvim
       which-key-nvim
-      neodev-nvim
       nvim-lspconfig
       conform-nvim
       nvim-cmp
@@ -72,6 +71,7 @@
 
     extraPackages = with pkgs; [
       lua-language-server
+      nil
       stylua
       rust-analyzer
       pyright
