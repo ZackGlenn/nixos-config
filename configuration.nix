@@ -103,6 +103,11 @@
   # Have Electron apps use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Install fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = ["JetBrainsMono"]; })
+  ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
     isNormalUser = true;

@@ -1,6 +1,7 @@
   # Home manager config
 { pkgs, pkgs-unstable, ... }:
 {
+
   home.packages = with pkgs; [
     bat
     ripgrep
@@ -13,10 +14,7 @@
     pavucontrol
   ];
 
-  programs.kitty = {
-    enable = true;
-    settings.confirm_os_window_close = 0;
-  };
+  programs.kitty = import ./kitty.nix;
 
   programs.tofi = {
     enable = true;
