@@ -119,6 +119,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- plugins
 --
 
+--Detect tabstop and shiftwidth automatically
+require("vim-sleuth").setup()
+
 -- Adds git related signs to the gutter, as well as utilities for managing changes
 require("gitsigns").setup({
 	signs = {
