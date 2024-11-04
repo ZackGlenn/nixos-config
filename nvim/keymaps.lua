@@ -1,9 +1,10 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
--- Save and quit keymaps
+-- Save, quit, and comment keymaps
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
+vim.keymap.set("n", "<leader>c", "gcc")
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
