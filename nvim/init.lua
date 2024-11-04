@@ -356,7 +356,7 @@ vim.keymap.set("n", "<leader>sn", function()
 	builtin.find_files({ cwd = "/home/zack/nixos/nvim/" })
 end, { desc = "[S]earch [N]eovim files" })
 
--- LSP
+-- [[ LSP ]]
 require("fidget").setup({})
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),

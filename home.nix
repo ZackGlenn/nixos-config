@@ -28,7 +28,19 @@
     vimAlias = true;
     vimdiffAlias = true;
 
-    extraLuaConfig = "${builtins.readFile ./nvim/init.lua}";
+    extraLuaConfig = "
+      ${builtins.readFile ./nvim/options.lua}
+      ${builtins.readFile ./nvim/keymaps.lua}
+      ${builtins.readFile ./nvim/gitsigns.lua}
+      ${builtins.readFile ./nvim/which_key.lua}
+      ${builtins.readFile ./nvim/conform.lua}
+      ${builtins.readFile ./nvim/cmp.lua}
+      ${builtins.readFile ./nvim/todo_comments.lua}
+      ${builtins.readFile ./nvim/mini.lua}
+      ${builtins.readFile ./nvim/treesitter.lua}
+      ${builtins.readFile ./nvim/telescope.lua}
+      ${builtins.readFile ./nvim/lsp.lua}
+    ";
 
     plugins = with pkgs.vimPlugins; [
       vim-sleuth
