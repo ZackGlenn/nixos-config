@@ -2,9 +2,9 @@
 --  See `:help vim.keymap.set()`
 
 -- Save, quit, and comment keymaps
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
-vim.keymap.set("n", "<leader>c", "gcc")
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file" })
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit neovim" })
+vim.keymap.set("n", "<leader>c", "gcc", { remap = true, desc = "Comment line" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
