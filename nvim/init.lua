@@ -337,7 +337,7 @@ require("telescope").setup({
 })
 
 pcall(require("telescope").load_extension, "fzf")
-pcall(require("telescope").loalextension, "ui-select")
+pcall(require("telescope").load_extension, "ui-select")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
@@ -357,6 +357,7 @@ vim.keymap.set("n", "<leader>sn", function()
 end, { desc = "[S]earch [N]eovim files" })
 
 -- LSP
+require("fidget").setup({})
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 	callback = function(event)
