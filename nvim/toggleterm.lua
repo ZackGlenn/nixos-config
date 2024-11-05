@@ -1,4 +1,8 @@
-require("toggleterm").setup({ open_mapping = "<leader>tf" })
+require("toggleterm").setup({
+	open_mapping = "<leader>tf",
+	insert_mappings = false,
+	terminal_mappings = false,
+})
 
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
