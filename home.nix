@@ -41,6 +41,7 @@
       ${builtins.readFile ./nvim/telescope.lua}
       ${builtins.readFile ./nvim/lsp.lua}
       ${builtins.readFile ./nvim/toggleterm.lua}
+      ${builtins.readFile ./nvim/nvim_autopairs.lua}
     ";
 
     plugins = with pkgs.vimPlugins; [
@@ -63,6 +64,7 @@
       cmp-nvim-lsp
       cmp-path
       toggleterm-nvim
+      nvim-autopairs
 
       pkgs-unstable.vimPlugins.lazydev-nvim
 
