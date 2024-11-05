@@ -27,15 +27,16 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<C-q>", "<C-w><C-c>", { desc = "Close focused window" })
 
 -- Add similar keybinds for navigating in terminal mode
-vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
-vim.keymap.set("t", "<C-h>", "<Cmd>wincmd h<CR>")
-vim.keymap.set("t", "<C-j>", "<Cmd>wincmd j<CR>")
-vim.keymap.set("t", "<C-k>", "<Cmd>wincmd k<CR>")
-vim.keymap.set("t", "<C-l>", "<Cmd>wincmd l<CR>")
-vim.keymap.set("t", "<C-q>", "<Cmd>wincmd c<CR>")
-vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>")
+vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Escape terminal mode" })
+vim.keymap.set("t", "<C-h>", "<Cmd>wincmd h<CR>", { desc = "Move focus to the left window" })
+vim.keymap.set("t", "<C-j>", "<Cmd>wincmd j<CR>", { desc = "Move focus to the right window" })
+vim.keymap.set("t", "<C-k>", "<Cmd>wincmd k<CR>", { desc = "Move focus to the lower window" })
+vim.keymap.set("t", "<C-l>", "<Cmd>wincmd l<CR>", { desc = "Move focus to the upper window" })
+vim.keymap.set("t", "<C-q>", "<Cmd>wincmd c<CR>", { desc = "Close focused window" })
+vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>", { desc = "Start window command" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
