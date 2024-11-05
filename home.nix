@@ -54,7 +54,6 @@
       nvim-cmp
       tokyonight-nvim
       todo-comments-nvim
-      mini-nvim
       plenary-nvim
       telescope-fzf-native-nvim
       telescope-ui-select-nvim
@@ -70,6 +69,7 @@
       lspkind-nvim
 
       pkgs-unstable.vimPlugins.lazydev-nvim
+      pkgs-unstable.vimPlugins.mini-nvim
 
       (nvim-treesitter.withPlugins (p: [
         p.nix
