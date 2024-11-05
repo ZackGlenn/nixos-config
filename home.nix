@@ -67,6 +67,7 @@
       toggleterm-nvim
       nvim-autopairs
       aerial-nvim
+      lspkind-nvim
 
       pkgs-unstable.vimPlugins.lazydev-nvim
 

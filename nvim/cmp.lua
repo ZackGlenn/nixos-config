@@ -2,6 +2,7 @@
 -- See `:help cmp`
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require("lspkind")
 luasnip.config.setup({})
 
 cmp.setup({
@@ -11,6 +12,10 @@ cmp.setup({
 		end,
 	},
 	completion = { completeopt = "menu,menuone,noinsert" },
+	---@diagnostic disable-next-line: missing-fields
+	formatting = {
+		format = lspkind.cmp_format(),
+	},
 
 	-- For an understanding of why these mappings were
 	-- chosen, you will need to read `:help ins-completion`
