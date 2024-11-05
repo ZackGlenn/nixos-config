@@ -30,7 +30,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "<C-q>", "<C-w><C-c>", { desc = "Close focused window" })
 
 -- Add similar keybinds for navigating in terminal mode
-vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Escape terminal mode" })
+vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { desc = "Escape terminal mode" })
 vim.keymap.set("t", "<C-h>", "<Cmd>wincmd h<CR>", { desc = "Move focus to the left window" })
 vim.keymap.set("t", "<C-j>", "<Cmd>wincmd j<CR>", { desc = "Move focus to the right window" })
 vim.keymap.set("t", "<C-k>", "<Cmd>wincmd k<CR>", { desc = "Move focus to the lower window" })
