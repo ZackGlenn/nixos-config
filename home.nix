@@ -42,6 +42,7 @@
       ${builtins.readFile ./nvim/lsp.lua}
       ${builtins.readFile ./nvim/toggleterm.lua}
       ${builtins.readFile ./nvim/nvim_autopairs.lua}
+      ${builtins.readFile ./nvim/aerial.lua}
     ";
 
     plugins = with pkgs.vimPlugins; [
@@ -65,6 +66,7 @@
       cmp-path
       toggleterm-nvim
       nvim-autopairs
+      aerial-nvim
 
       pkgs-unstable.vimPlugins.lazydev-nvim
 
