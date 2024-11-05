@@ -43,6 +43,7 @@
       ${builtins.readFile ./nvim/toggleterm.lua}
       ${builtins.readFile ./nvim/nvim_autopairs.lua}
       ${builtins.readFile ./nvim/aerial.lua}
+      ${builtins.readFile ./nvim/ibl.lua}
     ";
 
     plugins = with pkgs.vimPlugins; [
@@ -67,6 +68,7 @@
       nvim-autopairs
       aerial-nvim
       lspkind-nvim
+      indent-blankline-nvim
 
       pkgs-unstable.vimPlugins.lazydev-nvim
       pkgs-unstable.vimPlugins.mini-nvim
