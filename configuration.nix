@@ -128,6 +128,7 @@
     neovim
     kitty
     wl-clipboard
+    chromium
   ];
 
   # enable git and lazygit
