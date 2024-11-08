@@ -41,7 +41,6 @@
       ${builtins.readFile ./nvim/telescope.lua}
       ${builtins.readFile ./nvim/lsp.lua}
       ${builtins.readFile ./nvim/toggleterm.lua}
-      ${builtins.readFile ./nvim/nvim_autopairs.lua}
       ${builtins.readFile ./nvim/aerial.lua}
       ${builtins.readFile ./nvim/ibl.lua}
     ";
@@ -65,7 +64,6 @@
       cmp-nvim-lsp
       cmp-path
       toggleterm-nvim
-      nvim-autopairs
       aerial-nvim
       lspkind-nvim
       indent-blankline-nvim
