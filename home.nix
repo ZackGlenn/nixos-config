@@ -75,16 +75,16 @@
 
       (nvim-treesitter.withPlugins (p: [
         p.nix
-	p.lua
-	p.rust
-	p.python
-	p.julia
-	p.cpp
+        p.lua
+        p.rust
+        p.python
+        p.julia
+        p.cpp
         p.bash
-	p.fish
-	p.toml
-	p.yaml
-	p.json
+        p.fish
+        p.toml
+        p.yaml
+        p.json
       ]))
     ];
 
