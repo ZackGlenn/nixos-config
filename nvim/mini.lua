@@ -7,6 +7,10 @@ require("mini.surround").setup()
 -- file icons
 require("mini.icons").setup()
 
+-- file browser
+require("mini.files").setup()
+vim.keymap.set("n", "<leader>e", MiniFiles.open, { desc = "Open file browser" })
+
 -- autopairs
 require("mini.pairs").setup()
 
