@@ -83,6 +83,8 @@
         p.toml
         p.yaml
         p.json
+        p.query
+        p.vimdoc
       ]))
     ];
 
