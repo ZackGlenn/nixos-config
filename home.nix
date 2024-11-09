@@ -1,5 +1,5 @@
   # Home manager config
-{ pkgs, pkgs-unstable, config, lib, ... }:
+{ config, lib, pkgs, pkgs-unstable, ... }:
 {
 
   home.packages = with pkgs; [

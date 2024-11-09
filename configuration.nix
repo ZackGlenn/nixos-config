@@ -15,8 +15,7 @@
           pkgs-unstable = import inputs.nixpkgs-unstable {
             system = pkgs.system;
           };
-          inherit config;
-          inherit lib;
+          inherit config lib;
         };
       }
     ];
