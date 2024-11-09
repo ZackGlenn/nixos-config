@@ -1,5 +1,5 @@
   # Home manager config
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{config, lib, pkgs, pkgs-unstable, ... }:
 {
 
   home.packages = with pkgs; [
@@ -112,7 +112,6 @@
     [[ -f "$tofi_cache" ]] && rm "$tofi_cache"
   '';
   };
-
 
   # state version is required and should stay at the initial version
   home.stateVersion = "24.05";

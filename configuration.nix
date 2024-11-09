@@ -10,12 +10,11 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # home manager
-      inputs.home-manager.nixosModules.default {
+      inputs.home-manager.nixosModules.home-manager {
         home-manager.extraSpecialArgs = {
           pkgs-unstable = import inputs.nixpkgs-unstable {
             system = pkgs.system;
           };
-          inherit config lib;
         };
       }
     ];
