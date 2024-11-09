@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{pkgs, inputs, ... }:
+{config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -15,6 +15,8 @@
           pkgs-unstable = import inputs.nixpkgs-unstable {
             system = pkgs.system;
           };
+          inherit config;
+          inherit lib;
         };
       }
     ];
