@@ -21,6 +21,11 @@
     settings.terminal = "kitty";
   };
 
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+  };
+
   programs.neovim = {
     enable = true;
     package = pkgs-unstable.neovim-unwrapped;
