@@ -6,7 +6,6 @@
     bat
     ripgrep
     joshuto
-    qutebrowser
     fish
     lxqt.lxqt-policykit
     clipse
@@ -15,6 +14,7 @@
   ];
 
   programs.kitty = import ./kitty.nix;
+  programs.qutebrowser = import ./qutebrowser.nix;
 
   programs.tofi = {
     enable = true;
