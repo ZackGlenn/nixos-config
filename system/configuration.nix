@@ -116,7 +116,7 @@
   };
 
   # Home manager config
-  home-manager.users.zack = import ./home.nix;
+  home-manager.users.zack = import ../home/home.nix;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

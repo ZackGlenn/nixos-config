@@ -25,8 +25,8 @@
     enable = true;
     systemd.enable = true;
     style = "
-      ${builtins.readFile ./tokyonight.css}
-      ${builtins.readFile ./waybar_style.css}
+      ${builtins.readFile ./style/tokyonight.css}
+      ${builtins.readFile ./waybar/style.css}
     ";
   };
 
