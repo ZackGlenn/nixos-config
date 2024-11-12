@@ -164,6 +164,7 @@ bind = [
   "$mainMod, R, exec, $menu"
   "$mainMod, P, pseudo," # dwindle
   "$mainMod, T, togglesplit," # dwindle
+  "$mainMod, SPACE, fullscreen, 1" # dwindle
 
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"
