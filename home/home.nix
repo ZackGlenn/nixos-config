@@ -21,14 +21,7 @@
     settings.terminal = "kitty";
   };
 
-  programs.waybar = {
-    enable = true;
-    systemd.enable = true;
-    style = "
-      ${builtins.readFile ./style/tokyonight.css}
-      ${builtins.readFile ./waybar/style.css}
-    ";
-  };
+  programs.waybar = import ./waybar/waybar.nix;
 
   programs.neovim = {
     enable = true;
