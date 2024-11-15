@@ -15,7 +15,6 @@
         "idle_inhibitor"
         "tray"
         "hyprland/workspaces"
-        "custom/cava-internal"
       ];
       modules-center = [
         "custom/weather"
@@ -62,12 +61,8 @@
         tooltip = "true";
       };
       "custom/launcher" = {
-        format = "󰣇";
+        format = "";
         on-click = "sleep 0.1 && /home/narmis/.config/rofi/launchers/type-3/launcher.sh ";
-      };
-      "custom/cava-internal" = {
-        exec = "~/.config/waybar/Cava.sh";
-        tooltip = false;
       };
       "hyprland/workspaces" = {
         all-outputs = true;
@@ -85,14 +80,13 @@
           "9" = "➒";
           "10" = "➓";
           urgent = "";
-          focused = "󪤰";
         };
       };
       idle_inhibitor = {
         format = "{icon}";
         format-icons = {
-          deactivated = "󪤨";
-          activated = "󪤾";
+          deactivated = "";
+          activated = "";
         };
         tooltip = false;
         on-click = "sleep 0.1 && ~/.local/bin/idle-lock.sh";
@@ -114,7 +108,7 @@
       };
       disk = {
         interval = 30;
-        format = "󪤈 {used}";
+        format = " {used}";
         path = "/home";
         tooltip = true;
         on-click = "sleep 0.1 && kitty ncdu";
@@ -123,7 +117,7 @@
       pulseaudio = {
         scroll-step = 1;
         format = "{icon} {volume}%";
-        format-muted = "󪤑 Muted";
+        format-muted = "󰝟 Muted";
         format-icons = {
           default = [
             ""
@@ -162,7 +156,7 @@
       };
       clock = {
         interval = 1;
-        format = "<span foreground='#9ECE6A'>󪥐</span> {:%I:%M %p  %A %b %d}";
+        format = "<span foreground='#9ECE6A'>󰥔 </span> {:%I:%M %p  %A %b %d}";
         tooltip = true;
         tooltip-format = "{:%A, %d %B %Y}\n<tt>{calendar}</tt>";
         calendar = {
@@ -177,14 +171,14 @@
       memory = {
         on-click = "sleep 0.1 && kitty btm";
         interval = 1;
-        format = "󪤔 {used}";
+        format = " {used}";
         states = {
           warning = 85;
         };
       };
       cpu = {
         interval = 1;
-        format = "󰻠 {usage}%";
+        format = " {usage}%";
       };
       mpd = {
         max-length = 25;
@@ -204,7 +198,7 @@
         interval = 1;
         format-wifi = "󰖩 {essid}";
         format-ethernet = "󰈀  {ifname} ({ipaddr})";
-        format-linked = "󪤅 {essid} (No IP)";
+        format-linked = "󰲊 {essid} (No IP)";
         format-disconnected = "󰖪 Disconnected";
         on-click = "sleep 0.1 && kitty nmtui";
         tooltip = true;
