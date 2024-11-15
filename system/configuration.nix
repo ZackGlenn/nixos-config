@@ -105,8 +105,12 @@
 
   # Install fonts
   fonts.packages = with pkgs; [
+    font-awesome
     (nerdfonts.override { fonts = ["JetBrainsMono"]; })
   ];
+
+  # Make JetBrainsMono the fallback monospace font
+  fonts.fontconfig.defaultFonts.monospace = [ "JetBrainsMono" ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zack = {
