@@ -11,6 +11,7 @@
     clipse
     brightnessctl
     pavucontrol
+    btop
   ];
 
   programs.kitty = import ./kitty.nix;
