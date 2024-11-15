@@ -106,7 +106,7 @@
   # Install fonts
   fonts.packages = with pkgs; [
     font-awesome
-    (nerdfonts.override { fonts = ["JetBrainsMono"]; })
+    (nerdfonts.override { fonts = ["JetBrainsMono" "Iosevka"]; })
   ];
 
   # Make JetBrainsMono the fallback monospace font
