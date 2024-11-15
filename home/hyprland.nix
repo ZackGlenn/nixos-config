@@ -32,6 +32,7 @@ monitor = ", preferred, auto, auto";
 exec-once = [
   "nm-applet &"
   "lxqt-policykit-agent"
+  "qutebrowser --nowindow" # autostart qb to improve time opening first window
   "$terminal"
 ];
 
