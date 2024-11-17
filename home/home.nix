@@ -17,7 +17,6 @@
     clipse
     brightnessctl
     pavucontrol
-    btop
     dust
     tldr
     cowsay
@@ -30,6 +29,11 @@
   programs.tofi = {
     enable = true;
     settings.terminal = "kitty";
+  };
+
+  programs.btop = {
+    enable = true;
+    settings.color_theme = "tokyo-night";
   };
 
   services.dunst.enable = true;
