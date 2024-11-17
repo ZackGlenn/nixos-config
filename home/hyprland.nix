@@ -32,6 +32,7 @@ monitor = ", preferred, auto, auto";
 exec-once = [
   "nm-applet &"
   "lxqt-policykit-agent"
+  "warpd"
   "qutebrowser --nowindow" # autostart qb to improve time opening first window
   "$terminal"
 ];
@@ -166,6 +167,10 @@ bind = [
   "$mainMod, P, pseudo," # dwindle
   "$mainMod, T, togglesplit," # dwindle
   "$mainMod, SPACE, fullscreen, 1" # dwindle
+
+  # warpd binds
+  "$mainMod, F, exec, warpd --hint"
+  "$mainMod Shift, F, exec, warpd --hint --oneshot"
 
   # Move focus with mainMod + arrow keys
   "$mainMod, left, movefocus, l"
