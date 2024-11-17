@@ -30,7 +30,6 @@ monitor = ", preferred, auto, auto";
 # or execute your favorite apps at launch like this:
 
 exec-once = [
-  "nm-applet &"
   "lxqt-policykit-agent"
   "qutebrowser --nowindow" # autostart qb to improve time opening first window
   "$terminal"

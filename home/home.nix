@@ -23,7 +23,6 @@
     cmatrix
     asciiquarium
     neofetch
-    networkmanagerapplet
   ];
 
   programs.tofi = {
