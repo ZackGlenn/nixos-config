@@ -24,7 +24,6 @@
     asciiquarium
     neofetch
     networkmanagerapplet
-    warpd
   ];
 
   programs.tofi = {
