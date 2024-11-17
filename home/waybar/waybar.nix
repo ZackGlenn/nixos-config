@@ -21,10 +21,6 @@
       modules-right = [
         "bluetooth"
         "network"
-        "cpu"
-        "memory"
-        "disk"
-        "temperature"
         "backlight"
         "pulseaudio"
         "battery"
