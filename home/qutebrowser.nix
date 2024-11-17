@@ -1,4 +1,6 @@
+{...}:
 {
+programs.qutebrowser = {
   enable = true;
   keyBindings = {
     normal = {
@@ -57,4 +59,5 @@
     url.default_page = "qute://start";
     url.start_pages = "qute://start";
   };
+};
 }

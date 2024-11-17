@@ -1,7 +1,12 @@
   # Home manager config
 {config, lib, pkgs, pkgs-unstable, ... }:
 {
-  imports = [./nvim/nvim.nix];
+  imports = [
+    ./nvim/nvim.nix
+    ./kitty.nix
+    ./qutebrowser.nix
+    ./waybar/waybar.nix
+  ];
 
   home.packages = with pkgs; [
     bat
@@ -22,15 +27,10 @@
     networkmanagerapplet
   ];
 
-  programs.kitty = import ./kitty.nix;
-  programs.qutebrowser = import ./qutebrowser.nix;
-
   programs.tofi = {
     enable = true;
     settings.terminal = "kitty";
   };
-
-  programs.waybar = import ./waybar/waybar.nix;
 
   services.dunst.enable = true;
   services.playerctld.enable = true;
