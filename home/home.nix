@@ -12,6 +12,11 @@
     brightnessctl
     pavucontrol
     btop
+    tldr
+    cowsay
+    cmatrix
+    asciiquarium
+    neofetch
   ];
 
   programs.kitty = import ./kitty.nix;

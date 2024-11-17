@@ -11,15 +11,12 @@
       position = "top";
       modules-left = [
         "custom/launcher"
-        "custom/notification"
         "idle_inhibitor"
         "tray"
         "hyprland/workspaces"
       ];
       modules-center = [
-        "custom/weather"
         "clock"
-        "custom/pomodoro"
       ];
       modules-right = [
         "network"
@@ -30,39 +27,9 @@
         "battery"
         "custom/powermenu"
       ];
-      "custom/notification" = {
-        tooltip = false;
-        format = "{icon}";
-        format-icons = {
-          notification = "󰂚<span foreground='#F7768E'><sup></sup></span>";
-          none = "󰂚";
-          dnd-notification = "󰂛<span foreground='#F7768E'><sup></sup></span>";
-          dnd-none = "󰂛";
-          inhibited-notification = "󰂚<span foreground='#F7768E'><sup></sup></span>";
-          inhibited-none = "󰂚";
-          dnd-inhibited-notification = "󰂛<span foreground='#F7768E'><sup></sup></span>";
-          dnd-inhibited-none = "󰂛";
-        };
-        return-type = "json";
-        exec-if = "which swaync-client";
-        exec = "sleep 0.1 && swaync-client -swb";
-        on-click = "sleep 0.1 && swaync-client -t -sw";
-        on-click-right = "sleep 0.1 && swaync-client -d -sw";
-        escape = true;
-      };
-      "custom/pomodoro" = {
-        format = "{}";
-        exec = "python3 ~/.config/waybar/scripts/pomodoro.py";
-        interval = 1;
-        return-type = "json";
-        on-click = "sleep 0.1 && gnome-pomodoro";
-        on-click-right = "sleep 0.1 && gnome-pomodoro --pause-resume";
-        on-click-middle = "sleep 0.1 && gnome-pomodoro --skip";
-        tooltip = "true";
-      };
       "custom/launcher" = {
         format = "";
-        on-click = "sleep 0.1 && /home/narmis/.config/rofi/launchers/type-3/launcher.sh ";
+        on-click = "sleep 0.1 && tofi-drun | xargs hyprctl dispatcher exec --";
       };
       "hyprland/workspaces" = {
         all-outputs = true;
@@ -89,12 +56,10 @@
           activated = "";
         };
         tooltip = false;
-        on-click = "sleep 0.1 && ~/.local/bin/idle-lock.sh";
       };
       backlight = {
-        device = "nvidia_wmi_ec_backlight";
-        on-scroll-up = "light -A 7";
-        on-scroll-down = "light -U 7";
+        on-scroll-up = "brightnessctl s 10%+";
+        on-scroll-down = "brightnessctl s 10%-";
         format = "{icon} {percent}%";
         format-icons = [
           "󰃚"
@@ -109,9 +74,8 @@
       disk = {
         interval = 30;
         format = " {used}";
-        path = "/home";
         tooltip = true;
-        on-click = "sleep 0.1 && kitty ncdu";
+        on-click = "sleep 0.1 && kitty dust";
         tooltip-format = "{used}/{total} => {path} {percentage_used}%";
       };
       pulseaudio = {
@@ -125,7 +89,7 @@
             "󰕾"
           ];
         };
-        on-click = "sleep 0.1 && pactl set-sink-mute @DEFAULT_SINK@ toggle";
+        on-click = "sleep 0.1 && wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
         tooltip = false;
       };
       battery = {
@@ -151,12 +115,10 @@
         format-full = "{icon} {capacity}%";
         format-charging = "󰂄 {capacity}%";
         tooltip = true;
-        on-click-middle = "echo 0 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode";
-        on-click-right = "echo 1 > /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode";
       };
       clock = {
         interval = 1;
-        format = "<span foreground='#9ECE6A'>󰥔 </span> {:%I:%M %p  %A %b %d}";
+        format = "<span foreground='#9ECE6A'>󰥔 </span> {:%H:%M %p  %A %b %d}";
         tooltip = true;
         tooltip-format = "{:%A, %d %B %Y}\n<tt>{calendar}</tt>";
         calendar = {
@@ -169,7 +131,7 @@
         };
       };
       memory = {
-        on-click = "sleep 0.1 && kitty btm";
+        on-click = "sleep 0.1 && kitty btop";
         interval = 1;
         format = " {used}";
         states = {
@@ -179,20 +141,6 @@
       cpu = {
         interval = 1;
         format = " {usage}%";
-      };
-      mpd = {
-        max-length = 25;
-        format = "<span foreground='#bb9af7'></span> {title}";
-        format-paused = " {title}";
-        format-stopped = "<span foreground='#bb9af7'></span>";
-        format-disconnected = "";
-        on-click = "mpc --quiet toggle";
-        on-click-right = "mpc ls | mpc add";
-        on-click-middle = "kitty ncmpcpp";
-        on-scroll-up = "mpc --quiet prev";
-        on-scroll-down = "mpc --quiet next";
-        smooth-scrolling-threshold = 5;
-        tooltip-format = "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})";
       };
       network = {
         interval = 1;
@@ -204,35 +152,19 @@
         tooltip = true;
       };
       temperature = {
-        hwmon-path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input";
         critical-threshold = 80;
         tooltip = false;
         format = " {temperatureC}°C";
       };
       "custom/powermenu" = {
         format = "";
+        # TODO: powermenu
         on-click = "sleep 0.1 && /home/narmis/.config/rofi/powermenu/type-1/powermenu.sh";
         tooltip = false;
       };
       tray = {
         icon-size = 15;
         spacing = 5;
-      };
-      "custom/weather" = {
-        format = "{}°";
-        tooltip = true;
-        interval = 3600;
-        exec = "wttrbar --location Adelaide";
-        return-type = "json";
-      };
-      "custom/recording" = {
-        exec = "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status";
-        format = "{}";
-        on-click = "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen";
-        on-click-right = "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region";
-        restart-interval = 1;
-        return-type = "json";
-        tooltip = true;
       };
     };
   };
