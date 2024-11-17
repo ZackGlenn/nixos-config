@@ -57,6 +57,7 @@ programs.neovim = {
         p.rust
         p.python
         p.julia
+        p.markdown
         p.cpp
         p.bash
         p.fish
