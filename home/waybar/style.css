@@ -24,7 +24,7 @@
 }
 
 #mode, #clock, #memory, #temperature, #cpu, #custom-weather,
-#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, 
+#mpd, #idle_inhibitor, #backlight, #pulseaudio, #network, #bluetooth
 #battery, #custom-powermenu, #custom-cava-internal,
 #custom-launcher, #tray, #disk, #custom-pacman, #custom-pomodoro, #custom-dexcom, #custom-notification{
   padding-left: .6rem;
@@ -148,6 +148,9 @@ tooltip label {
 }
 #network {
   color: @lavender; /* not active */
+}
+#bluetooth {
+  color: @sapphire;
 }
 #network.disconnected {
   color: @foreground;  /* not active */
