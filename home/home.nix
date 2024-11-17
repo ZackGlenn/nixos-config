@@ -18,6 +18,7 @@
     cmatrix
     asciiquarium
     neofetch
+    networkmanagerapplet
   ];
 
   programs.kitty = import ./kitty.nix;
