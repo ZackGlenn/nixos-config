@@ -89,7 +89,7 @@
             "󰕾"
           ];
         };
-        on-click = "sleep 0.1 && wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+        on-click = "sleep 0.1 && wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         tooltip = false;
       };
       battery = {

@@ -12,6 +12,7 @@
     brightnessctl
     pavucontrol
     btop
+    dust
     tldr
     cowsay
     cmatrix
