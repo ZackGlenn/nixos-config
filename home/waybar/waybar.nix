@@ -19,10 +19,12 @@
         "clock"
       ];
       modules-right = [
-        "network"
         "bluetooth"
-        "temperature"
+        "network"
+        "cpu"
         "memory"
+        "disk"
+        "temperature"
         "backlight"
         "pulseaudio"
         "battery"
