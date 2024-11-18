@@ -1,10 +1,10 @@
 -- telescope
 require("telescope").setup({
-	extensions = {
-		["ui-select"] = {
-			require("telescope.themes").get_dropdown(),
-		},
-	},
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown(),
+    },
+  },
 })
 
 pcall(require("telescope").load_extension, "fzf")
@@ -24,5 +24,5 @@ vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find exis
 
 -- Shortcut for searching your Neovim configuration files
 vim.keymap.set("n", "<leader>sn", function()
-	builtin.find_files({ cwd = "/home/zack/nixos/nvim/" })
+  builtin.find_files({ cwd = "/home/zack/nixos/nvim/" })
 end, { desc = "[S]earch [N]eovim files" })
