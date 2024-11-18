@@ -26,7 +26,6 @@ programs.neovim = {
     ";
 
     plugins = with pkgs.vimPlugins; [
-      vim-sleuth
       gitsigns-nvim
       which-key-nvim
       nvim-lspconfig
