@@ -14,6 +14,12 @@ vim.keymap.set("n", "<leader>e", MiniFiles.open, { desc = "Open file browser" })
 -- autopairs
 require("mini.pairs").setup()
 
+-- happier buffer removal
+require("mini.bufremove").setup()
+
+-- start screen
+require("mini.starter").setup()
+
 -- Simple and easy statusline.
 --  You could remove this setup call if you don't like it,
 --  and try some other statusline plugin
