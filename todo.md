@@ -15,3 +15,5 @@
 - cmp keymaps
 - look into code overview functionality
 - look into workspace indication for scratch workspace
+- trashing system
+- joshuto themeing
