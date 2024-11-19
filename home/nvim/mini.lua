@@ -4,20 +4,20 @@ require("mini.ai").setup({ n_lines = 500 })
 -- Add/delete/replace surroundings (brackets, quotes, etc.)
 require("mini.surround").setup()
 
--- file icons
+-- File icons
 require("mini.icons").setup()
 
--- file browser
+-- File browser
 require("mini.files").setup()
 vim.keymap.set("n", "<leader>e", MiniFiles.open, { desc = "Open file browser" })
 
--- autopairs
+-- Autopairs
 require("mini.pairs").setup()
 
--- happier buffer removal
+-- Happier buffer removal
 require("mini.bufremove").setup()
 
--- start screen
+-- Start screen
 require("mini.starter").setup()
 
 -- Simple and easy statusline.
