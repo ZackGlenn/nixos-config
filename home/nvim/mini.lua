@@ -22,8 +22,8 @@ require("mini.starter").setup()
 
 -- Tabline
 require("mini.tabline").setup()
-vim.keymap.set("n", "H", "<cmd>tabp<CR>")
-vim.keymap.set("n", "L", "<cmd>tabn<CR>")
+vim.keymap.set("n", "H", "<cmd>bprev<CR>")
+vim.keymap.set("n", "L", "<cmd>bnext<CR>")
 
 -- Simple and easy statusline.
 --  You could remove this setup call if you don't like it,
