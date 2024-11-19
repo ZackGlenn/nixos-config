@@ -119,7 +119,7 @@ programs.waybar = {
       };
       clock = {
         interval = 1;
-        format = "<span foreground='#9ECE6A'>󰥔 </span> {:%H:%M %p  %A %b %d}";
+        format = "<span foreground='#9ECE6A'>󰥔 </span> {:%H:%M  %A %b %d}";
         tooltip = true;
         tooltip-format = "{:%A, %d %B %Y}\n<tt>{calendar}</tt>";
         calendar = {
