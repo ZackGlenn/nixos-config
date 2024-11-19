@@ -135,7 +135,7 @@
     chromium
   ];
 
-  # enable git and lazygit
+  # enable git
   programs.git.enable = true;
   programs.git.config = {
     user = {
@@ -143,7 +143,6 @@
       email = "ZackGlenn05@gmail.com";
     };
   };
-  programs.lazygit.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
