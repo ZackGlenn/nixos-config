@@ -1,6 +1,5 @@
 # TODO
 
-- Switch to rofi?
 - powermenu
 - treesitter integration for todo?
 - fix login prompt to assume correct user
@@ -17,3 +16,7 @@
 - look into workspace indication for scratch workspace
 - trashing system
 - joshuto themeing
+- fix visual mode comment mapping
+- wallpapers
+- hypridle
+- figure out qutebrowser startup stuff
