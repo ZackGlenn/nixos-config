@@ -51,7 +51,6 @@
     powerOnBoot = true;
     input.General.ClassicBondedOnly = false;
   };
-  services.blueman.enable = true;
 
   # Enable pipewire
   services.pipewire.enable = true;

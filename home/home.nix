@@ -24,6 +24,7 @@
     cmatrix
     asciiquarium
     neofetch
+    blueman
   ];
 
   programs.tofi = {
