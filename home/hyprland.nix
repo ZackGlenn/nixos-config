@@ -20,6 +20,7 @@ monitor = ", preferred, auto, auto";
 "$fileManager" = "kitty joshuto";
 "$browser" = "qutebrowser";
 "$menu" = "tofi-drun | xargs hyprctl dispatcher exec --";
+"$menu_full" = "tofi-run | xargs hyprctl dispatcher exec --";
 
 
 #################
@@ -162,6 +163,7 @@ bind = [
   "$mainMod, B, exec, $browser"
   "$mainMod, V, togglefloating,"
   "$mainMod, R, exec, $menu"
+  "$mainMod SHIFT, R, exec, $menu_full"
   "$mainMod, P, pseudo," # dwindle
   "$mainMod, T, togglesplit," # dwindle
   "$mainMod, SPACE, fullscreen, 1" # dwindle
