@@ -7,7 +7,7 @@ programs.qutebrowser = {
       "J" = "tab-prev";
       "K" = "tab-next";
       "gJ" = "tab-move -";
-      "g=" = "tab-move +";
+      "gK" = "tab-move +";
     };
   };
   searchEngines = {
@@ -48,6 +48,7 @@ programs.qutebrowser = {
     nw = "https://wiki.nixos.org";
     np = "https://search.nixos.org/packages";
     hm = "https://home-manager-options.extranix.com/";
+    no = "https://search.nixos.org/options";
   };
   settings = {
     colors.webpage.preferred_color_scheme = "dark";
