@@ -74,6 +74,7 @@ programs.neovim = {
       stylua
       rust-analyzer
       pyright
+      nodePackages.bash-language-server
     ];
 };
 }
