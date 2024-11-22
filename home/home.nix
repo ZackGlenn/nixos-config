@@ -25,6 +25,7 @@
     asciiquarium
     neofetch
     blueman
+    swaylock
   ];
 
   programs.tofi = {

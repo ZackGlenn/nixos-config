@@ -52,6 +52,9 @@
     input.General.ClassicBondedOnly = false;
   };
 
+  # Enable PAM to allow swaylock to unlock the screen
+  security.pam.services.swaylock = {};
+
   # Enable pipewire
   services.pipewire.enable = true;
   services.pipewire.pulse.enable = true;
