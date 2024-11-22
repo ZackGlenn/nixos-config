@@ -20,3 +20,6 @@
 - wallpapers
 - hypridle
 - figure out qutebrowser startup stuff
+- icon themes
+- gtk and qt themes
+- dunst themeing and keybinds
