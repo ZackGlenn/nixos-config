@@ -7,6 +7,7 @@
     ./qutebrowser.nix
     ./waybar/waybar.nix
     ./lazygit.nix
+    ./scripts/scripts.nix
   ];
 
   home.packages = with pkgs; [
