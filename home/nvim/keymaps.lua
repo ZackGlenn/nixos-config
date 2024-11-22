@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit neovim" })
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Comment line" })
 
 -- remap L to account for my buffer navigation mapping
-vim.keymap.set("n", "L", "K", { desc = "LSP hover" })
+vim.keymap.set("n", "L", vim.lsp.buf.hover, { desc = "LSP hover" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
