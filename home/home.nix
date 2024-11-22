@@ -50,8 +50,10 @@
     settings.color_theme = "tokyo-night";
   };
 
-  services.dunst.enable = true;
-  services.playerctld.enable = true;
+  services = {
+    dunst.enable = true;
+    playerctld.enable = true;
+  };
 
   # Configure hyprland
   wayland.windowManager.hyprland.enable = true;
