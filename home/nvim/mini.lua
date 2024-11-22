@@ -22,8 +22,8 @@ require("mini.starter").setup()
 
 -- Tabline
 require("mini.tabline").setup()
-vim.keymap.set("n", "H", "<cmd>bprev<CR>")
-vim.keymap.set("n", "L", "<cmd>bnext<CR>")
+vim.keymap.set("n", "J", "<cmd>bprev<CR>")
+vim.keymap.set("n", "K", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<leader>c", "<cmd>bdelete<CR>")
 vim.keymap.set("n", "<leader>C", "<cmd>bdelete!<CR>")
 
