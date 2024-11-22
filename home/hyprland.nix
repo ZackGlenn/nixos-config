@@ -163,6 +163,7 @@ bind = [
   "$mainMod, B, exec, $browser"
   "$mainMod, V, togglefloating,"
   "$mainMod, R, exec, $menu"
+  "$mainMod, X, exec, powermenu"
   "$mainMod SHIFT, R, exec, $menu_full"
   "$mainMod, P, pseudo," # dwindle
   "$mainMod, T, togglesplit," # dwindle
