@@ -35,6 +35,8 @@ programs.waybar = {
       "hyprland/workspaces" = {
         all-outputs = true;
         active-only = true;
+        show-special = true;
+        special-visible-only = true;
         format = "{icon}";
         format-icons = {
           "1" = "➊";
@@ -47,8 +49,8 @@ programs.waybar = {
           "8" = "➑";
           "9" = "➒";
           "10" = "➓";
-          urgent = "";
           special = "󰰢";
+          urgent = "";
         };
       };
       idle_inhibitor = {
