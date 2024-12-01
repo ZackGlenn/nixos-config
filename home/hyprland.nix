@@ -34,6 +34,7 @@ exec-once = [
   "lxqt-policykit-agent"
   "qutebrowser --nowindow" # autostart qb to improve time opening first window
   "$terminal"
+  "[workspace special silent] $terminal"
 ];
 
 
