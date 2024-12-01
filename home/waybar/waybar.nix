@@ -48,6 +48,7 @@ programs.waybar = {
           "9" = "➒";
           "10" = "➓";
           urgent = "";
+          special = "󰰢";
         };
       };
       idle_inhibitor = {
