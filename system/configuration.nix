@@ -91,7 +91,11 @@
   # Enable greetd and  ReGreet
   services.greetd = {
     enable = true;
-      user = "zack";
+    settings = {
+      default_session = {
+        user = "zack";
+      };
+    };
   };
   programs.regreet.enable = true;
   programs.regreet.settings.GTK.application_prefer_dark_theme = true;
