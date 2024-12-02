@@ -41,7 +41,7 @@
     enable = true;
     theme = {
       package = pkgs.tokyonight-gtk-theme;
-      name = "Tokyonight-GTK-Theme";
+      name = "Tokyonight-Dark";
     };
     font = {
       name = "Sans";
