@@ -1,9 +1,8 @@
-{pkgs, pkgs-unstable, ...}:
+{pkgs, ...}:
 
 {
 programs.neovim = {
     enable = true;
-    package = pkgs-unstable.neovim-unwrapped;
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
@@ -46,9 +45,8 @@ programs.neovim = {
       aerial-nvim
       lspkind-nvim
       indent-blankline-nvim
-
-      pkgs-unstable.vimPlugins.lazydev-nvim
-      pkgs-unstable.vimPlugins.mini-nvim
+      lazydev-nvim
+      mini-nvim
 
       (nvim-treesitter.withPlugins (p: [
         p.nix

@@ -1,5 +1,5 @@
   # Home manager config
-{config, lib, pkgs, pkgs-unstable, ... }:
+{config, lib, pkgs, ... }:
 {
   imports = [
     ./nvim/nvim.nix
