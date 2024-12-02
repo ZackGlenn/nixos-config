@@ -44,6 +44,13 @@ window > box {
 
 
 /* Workspaces */
+#workspaces {
+  padding-right: .4rem;
+  padding-left: .4rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+
 #workspaces button {
   padding-right: .4rem;
   padding-left: .4rem;
