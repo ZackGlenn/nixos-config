@@ -49,6 +49,12 @@
     };
   };
 
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+    style.name = "gtk2";
+  };
+
   programs.tofi = {
     enable = true;
     settings = {
