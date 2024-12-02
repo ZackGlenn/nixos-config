@@ -27,7 +27,27 @@
     neofetch
     blueman
     swaylock
+    hyprcursor
   ];
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.tokyonight-gtk-theme;
+      name = "Tokyonight-GTK-Theme";
+    };
+    font = {
+      name = "Sans";
+      size = 11;
+    };
+  };
 
   programs.tofi = {
     enable = true;
