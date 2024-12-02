@@ -36,7 +36,6 @@ programs.waybar = {
         all-outputs = true;
         active-only = true;
         show-special = true;
-        special-visible-only = true;
         format = "{icon}";
         format-icons = {
           "1" = "➊";
