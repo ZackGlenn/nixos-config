@@ -112,7 +112,15 @@ local servers = {
   -- gopls = {},
   nil_ls = {},
   pyright = {},
-  rust_analyzer = {},
+  rust_analyzer = {
+    settings = {
+      ["rust-analyzer"] = {
+        diagnostics = {
+          enable = true,
+        },
+      },
+    },
+  },
   bashls = {},
   -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
   --
