@@ -80,7 +80,6 @@
   # xserver settings
   services.xserver = {
     enable = true;
-    dpi = 220;
     xkb = {
       layout = "us";
       variant = "";
