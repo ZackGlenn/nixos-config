@@ -59,6 +59,10 @@
   services.pipewire.enable = true;
   services.pipewire.pulse.enable = true;
 
+  # Enable gvfs and udisks2
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/Denver";
 
