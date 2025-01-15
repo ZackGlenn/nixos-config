@@ -28,6 +28,8 @@
     blueman
     swaylock
     hyprcursor
+    keepassxc
+    obsidian
   ];
 
   home.pointerCursor = {
