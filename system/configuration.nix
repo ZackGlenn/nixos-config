@@ -125,11 +125,11 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  # Home manager config
-  home-manager.users.zack = import ../home/home.nix;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Home manager config
+  home-manager.users.zack = import ../home/home.nix;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
