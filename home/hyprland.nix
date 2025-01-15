@@ -5,7 +5,7 @@
 ################
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor = ", preferred, auto, 2";
+monitor = ", preferred, auto, 1.5";
 
 
 ###################
