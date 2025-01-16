@@ -128,6 +128,14 @@
   # Allow unfree packagesconfig
   nixpkgs.config.allowUnfree = true;
 
+  # enable syncthing
+  services.syncthing = {
+    enable = true;
+    user = "zack";
+    openDefaultPorts = true;
+    dataDir = "/home/zack/Documents";
+  };
+
   # Home manager config
   home-manager = {
     useGlobalPkgs = true;
