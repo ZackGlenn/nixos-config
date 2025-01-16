@@ -31,6 +31,7 @@
     keepassxc
     obsidian
     typst
+    zathura
   ];
 
   home.pointerCursor = {
