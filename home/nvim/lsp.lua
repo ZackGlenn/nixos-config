@@ -121,6 +121,11 @@ local servers = {
       },
     },
   },
+  tinymist = {
+    settings = {
+      exportPdf = "onSave",
+    },
+  },
   bashls = {},
   -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
   --

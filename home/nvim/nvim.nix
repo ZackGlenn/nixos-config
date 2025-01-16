@@ -73,6 +73,7 @@ programs.neovim = {
       rust-analyzer
       pyright
       nodePackages.bash-language-server
+      tinymist
     ];
 };
 }

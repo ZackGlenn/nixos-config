@@ -30,6 +30,7 @@
     hyprcursor
     keepassxc
     obsidian
+    typst
   ];
 
   home.pointerCursor = {
