@@ -10,6 +10,7 @@ options="
 $lock
 $logout
 $sleep
+$reboot
 $shutdown
 "
 
@@ -19,7 +20,7 @@ if [ "$selection" == "$lock" ]; then
   swaylock -f
   exit 1
 elif [ "$selection" == "$logout" ]; then
-  loginctl terminate-user "$(whoami)"
+  hyprctl dispatch exit
   exit 1
 elif [ "$selection" == "$sleep" ]; then
   systemctl suspend;
