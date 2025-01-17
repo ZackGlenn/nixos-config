@@ -139,7 +139,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = 
-  let tokyo-night-sddm = pkgs.callPackage ../pkgs/tokyo-night-sddm.nix {}; in
+  let tokyo-night-sddm = pkgs.libsForQt5.callPackage ../pkgs/tokyo-night-sddm.nix {}; in
   with pkgs; [
     neovim
     kitty
