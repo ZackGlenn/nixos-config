@@ -94,7 +94,7 @@
   # Enable SDDM
   services.displayManager.sddm = {
     enable = true;
-    theme = "where-is-my-sddm-theme";
+    theme = "tokyo-night";
   };
 
   # Enable hyprland
@@ -138,13 +138,14 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  environment.systemPackages = 
+  let tokyo-night-sddm = pkgs.callPackage ../pkgs/tokyo-night-sddm.nix {}; in
+  with pkgs; [
     neovim
     kitty
     wl-clipboard
     chromium
-    where-is-my-sddm-theme
+    tokyo-night-sddm
   ];
 
   # enable git
