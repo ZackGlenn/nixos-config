@@ -91,17 +91,8 @@
     };
   };
 
-  # Enable greetd and  ReGreet
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        user = "zack";
-      };
-    };
-  };
-  programs.regreet.enable = true;
-  programs.regreet.settings.GTK.application_prefer_dark_theme = true;
+  # Enable SDDM
+  services.displayManager.sddm.enable = true;
 
   # Enable hyprland
   programs.hyprland.enable = true;
