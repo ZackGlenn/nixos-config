@@ -92,7 +92,10 @@
   };
 
   # Enable SDDM
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "where-is-my-sddm-theme";
+  };
 
   # Enable hyprland
   programs.hyprland.enable = true;
@@ -141,6 +144,7 @@
     kitty
     wl-clipboard
     chromium
+    where-is-my-sddm-theme
   ];
 
   # enable git
