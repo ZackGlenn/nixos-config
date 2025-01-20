@@ -7,7 +7,6 @@
     ./qutebrowser.nix
     ./waybar/waybar.nix
     ./lazygit.nix
-    ./bash.nix
     ./fish.nix
     ./scripts/scripts.nix
   ];
