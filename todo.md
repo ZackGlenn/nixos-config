@@ -1,7 +1,5 @@
 # TODO
 
-- `sudo nixos-rebuild switch` alias/script
-- fish?
 - project-nvim
 - cmp keymaps
 - look into code overview functionality
