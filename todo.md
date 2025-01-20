@@ -1,9 +1,6 @@
 # TODO
 
 - automatic garbage collection
-- fix login prompt to assume correct user?
-- have kitty appear on scratch workspace by default
-- qutebrowser bookmarks
 - `sudo nixos-rebuild switch` alias/script
 - fish?
 - project-nvim
@@ -14,7 +11,9 @@
 - fix visual mode comment mapping
 - wallpapers
 - hypridle
-- figure out qutebrowser startup stuff
 - icon themes
-- gtk and qt themes
 - dunst themeing and keybinds
+- look into nix-based neovim distros
+- build bluetoggle into the config
+- modularization
+- how to have different monitor and resolution setup for different machines with hyprland
