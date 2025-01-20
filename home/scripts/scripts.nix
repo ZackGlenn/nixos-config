@@ -5,5 +5,10 @@ home.packages = [
     name = "powermenu";
     text = "${builtins.readFile ./powermenu.sh}";
   })
+
+  (pkgs.writeShellApplication {
+      name = "hyprpass";
+      text = "${builtins.readFile ./hyprpass.sh}";
+  })
 ];
 }

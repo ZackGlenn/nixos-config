@@ -123,7 +123,7 @@
   users.users.zack = {
     isNormalUser = true;
     description = "Zack Glenn";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "ydotool" ];
   };
 
   # Allow unfree packagesconfig
@@ -174,6 +174,9 @@
       email = "ZackGlenn05@gmail.com";
     };
   };
+
+  # enable ydotool
+  programs.ydotool.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
