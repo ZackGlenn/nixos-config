@@ -1,6 +1,5 @@
 # TODO
 
-- automatic garbage collection
 - `sudo nixos-rebuild switch` alias/script
 - fish?
 - project-nvim
