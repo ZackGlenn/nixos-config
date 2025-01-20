@@ -127,7 +127,7 @@
     enable = true;
     user = "zack";
     openDefaultPorts = true;
-    dataDir = "/home/zack/Documents";
+    dataDir = "/home/zack/Sync";
   };
 
   # Home manager config
