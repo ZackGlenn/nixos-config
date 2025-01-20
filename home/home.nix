@@ -7,6 +7,8 @@
     ./qutebrowser.nix
     ./waybar/waybar.nix
     ./lazygit.nix
+    ./bash.nix
+    ./fish.nix
     ./scripts/scripts.nix
   ];
 
@@ -14,7 +16,6 @@
     bat
     ripgrep
     joshuto
-    fish
     lxqt.lxqt-policykit
     clipse
     brightnessctl
