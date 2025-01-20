@@ -192,10 +192,10 @@ bind = [
   "$mainMod SHIFT, down, swapwindow, d"
 
   # Move focused window with mainMod + SHIFT + hjkl
-  "$mainMod SHIFT, H, swapwindow, l"
-  "$mainMod SHIFT, L, swapwindow, r"
-  "$mainMod SHIFT, K, swapwindow, u"
-  "$mainMod SHIFT, J, swapwindow, d"
+  "$mainMod SHIFT, H, movewindow, l"
+  "$mainMod SHIFT, L, movewindow, r"
+  "$mainMod SHIFT, K, movewindow, u"
+  "$mainMod SHIFT, J, movewindow, d"
 
   # Switch workspasces with mainMod + [0-9]
   "$mainMod, 1, workspace, 1"
