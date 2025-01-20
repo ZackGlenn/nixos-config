@@ -38,13 +38,21 @@ then
   exit 1
 fi
 
+if [[ $mode == "" ]]
+then
+  mode="both"
+fi
+
 password=$(echo "" | tofi --prompt-text="Enter Password: " --hide-input=true --hidden-character="*" --require-match=false)
 if [[ $password == "" ]]; then exit 1; fi;
 
 list=$(echo "$password" | keepassxc-cli ls -qRf "$database")
+if [[ $list == "" ]]; then exit 1; fi
 selection=$(echo "$list" | tofi --prompt-text="Select Entry: ")
+if [[ $selection == "" ]]; then exit 1; fi
 
 attributes=$(echo "$password" | keepassxc-cli show -q -a "Username" -a "Password" "$database" "$selection")
+if [[ $attributes == "" ]]; then exit 1; fi
 name=$(echo "$attributes" | head -1)
 cred=$(echo "$attributes" | tail -1)
 
