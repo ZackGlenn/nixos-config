@@ -198,16 +198,16 @@ bind = [
   "$mainMod SHIFT, J, movewindow, d"
 
   # Switch workspasces with mainMod + [0-9]
-  "$mainMod, 1, workspace, 1"
-  "$mainMod, 2, workspace, 2"
-  "$mainMod, 3, workspace, 3"
-  "$mainMod, 4, workspace, 4"
-  "$mainMod, 5, workspace, 5"
-  "$mainMod, 6, workspace, 6"
-  "$mainMod, 7, workspace, 7"
-  "$mainMod, 8, workspace, 8"
-  "$mainMod, 9, workspace, 9"
-  "$mainMod, 0, workspace, 10"
+  "$mainMod, 1, focusworkspaceoncurrentmonitor, 1"
+  "$mainMod, 2, focusworkspaceoncurrentmonitor, 2"
+  "$mainMod, 3, focusworkspaceoncurrentmonitor, 3"
+  "$mainMod, 4, focusworkspaceoncurrentmonitor, 4"
+  "$mainMod, 5, focusworkspaceoncurrentmonitor, 5"
+  "$mainMod, 6, focusworkspaceoncurrentmonitor, 6"
+  "$mainMod, 7, focusworkspaceoncurrentmonitor, 7"
+  "$mainMod, 8, focusworkspaceoncurrentmonitor, 8"
+  "$mainMod, 9, focusworkspaceoncurrentmonitor, 9"
+  "$mainMod, 0, focusworkspaceoncurrentmonitor, 10"
 
   # Move active window to a workspace with mainMod + SHIFT + [0-9]
   "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
@@ -223,11 +223,11 @@ bind = [
 
 
   # Switch workspaces with mainMod + yuiop
-  "$mainMod, y, workspace, 1"
-  "$mainMod, u, workspace, 2"
-  "$mainMod, i, workspace, 3"
-  "$mainMod, o, workspace, 4"
-  "$mainMod, p, workspace, 5"
+  "$mainMod, y, focusworkspaceoncurrentmonitor, 1"
+  "$mainMod, u, focusworkspaceoncurrentmonitor, 2"
+  "$mainMod, i, focusworkspaceoncurrentmonitor, 3"
+  "$mainMod, o, focusworkspaceoncurrentmonitor, 4"
+  "$mainMod, p, focusworkspaceoncurrentmonitor, 5"
 
   # Move active window to a workspace with mainMod + SHIFT + yuiop
   "$mainMod SHIFT, y, movetoworkspacesilent, 1"
