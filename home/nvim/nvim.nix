@@ -23,6 +23,7 @@ programs.neovim = {
       ${builtins.readFile ./toggleterm.lua}
       ${builtins.readFile ./aerial.lua}
       ${builtins.readFile ./ibl.lua}
+      ${builtins.readFile ./project.lua}
     ";
 
     plugins = with pkgs.vimPlugins; [
@@ -48,6 +49,8 @@ programs.neovim = {
       indent-blankline-nvim
       lazydev-nvim
       mini-nvim
+      project-nvim
+      telescope-project-nvim
 
       (nvim-treesitter.withPlugins (p: [
         p.nix

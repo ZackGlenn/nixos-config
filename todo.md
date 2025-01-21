@@ -1,6 +1,5 @@
 # TODO
 
-- project-nvim
 - cmp keymaps
 - look into code overview functionality
 - trashing system
