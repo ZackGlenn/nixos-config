@@ -32,6 +32,7 @@
     obsidian
     typst
     zathura
+    webcord
   ];
 
   home.pointerCursor = {
