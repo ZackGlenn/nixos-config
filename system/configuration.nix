@@ -56,7 +56,10 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
-    input.General.ClassicBondedOnly = false;
+    input.General = {
+      ClassicBondedOnly = false; # fixes pairing problem with keyboard
+      UserspaceHID = false; # try to make bluez remember buds2 pro
+    };
   };
 
   # Enable PAM to allow swaylock to unlock the screen
