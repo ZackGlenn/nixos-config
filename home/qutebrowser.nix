@@ -52,6 +52,7 @@ programs.qutebrowser = {
     np = "https://search.nixos.org/packages";
     hm = "https://home-manager-options.extranix.com/";
     no = "https://search.nixos.org/options";
+    ch = "https://www.chess.com/";
   };
   settings = {
     colors.webpage.preferred_color_scheme = "dark";
