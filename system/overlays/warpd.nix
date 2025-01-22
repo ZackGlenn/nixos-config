@@ -1,4 +1,4 @@
-(final: prev: {
+final: prev: {
   warpd = (prev.warpd.overrideAttrs (old: {
     src = prev.fetchFromGitHub {
       owner = "rvaiya";
@@ -7,4 +7,4 @@
       sha256 = "sha256-61+kJvOi4oog0+tGucc1rWemdx2vp15wlluJE+1PzTs=";
     };
   })).override{withX = false;};
-})
+}

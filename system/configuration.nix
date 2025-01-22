@@ -24,8 +24,8 @@
 
   # Apply overlays
   nixpkgs.overlays = [
-    import ./overlays/qutebrowser.nix
-    import ./overlays/warpd.nix
+    ( import ./overlays/qutebrowser.nix )
+    ( import ./overlays/warpd.nix )
   ];
 
   # Enable automatic gc
