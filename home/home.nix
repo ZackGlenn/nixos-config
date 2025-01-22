@@ -33,7 +33,6 @@
     typst
     zathura
     webcord
-    warpd
   ];
 
   home.pointerCursor = {
