@@ -171,6 +171,7 @@ bind = [
   "$mainMod SHIFT, R, exec, $menu_full"
   "$mainMod, A, exec, hyprpass -d ~/Sync/Passwords/Passwords.kdbx"
   "$mainMod SHIFT, A, exec, hyprpass -p -d ~/Sync/Passwords/Passwords.kdbx"
+  "$mainMod, F, exec, warpd --hint"
   "$mainMod, P, pseudo," # dwindle
   "$mainMod, T, togglesplit," # dwindle
   "$mainMod, SPACE, fullscreen, 1" # dwindle
