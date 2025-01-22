@@ -22,6 +22,12 @@
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # Apply overlays
+  nixpkgs.overlays = [
+    import ./overlays/qutebrowser.nix
+    import ./overlays/warpd.nix
+  ];
+
   # Enable automatic gc
   nix.gc = {
     automatic = true;

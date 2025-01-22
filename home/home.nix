@@ -8,7 +8,6 @@
     ./waybar/waybar.nix
     ./lazygit.nix
     ./fish.nix
-    ./warpd.nix
     ./scripts/scripts.nix
   ];
 
@@ -34,6 +33,7 @@
     typst
     zathura
     webcord
+    warpd
   ];
 
   home.pointerCursor = {
