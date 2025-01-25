@@ -50,6 +50,7 @@ programs.qutebrowser = {
     hm = "https://home-manager-options.extranix.com/";
     no = "https://search.nixos.org/options";
     ch = "https://www.chess.com/";
+    hw = "https://wiki.hyprland.org/";
   };
   settings = {
     colors.webpage.preferred_color_scheme = "dark";
