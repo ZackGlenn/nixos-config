@@ -199,6 +199,12 @@ bind = [
   "$mainMod SHIFT, K, movewindow, u"
   "$mainMod SHIFT, J, movewindow, d"
 
+  # Resize focused window with mainMod + CTRL + hjkl
+  "$mainMod CTRL, H, resizeactive, exact -10% 0%"
+  "$mainMod CTRL, L, resizeactive, exact 10% 0%"
+  "$mainMod CTRL, K, resizeactive, exact 0% 10%"
+  "$mainMod CTRL, J, resizeactive, exact 0% -10%"
+
   # Switch workspasces with mainMod + [0-9]
   "$mainMod, 1, focusworkspaceoncurrentmonitor, 1"
   "$mainMod, 2, focusworkspaceoncurrentmonitor, 2"

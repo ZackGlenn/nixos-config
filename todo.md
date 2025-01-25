@@ -13,4 +13,3 @@
 - build bluetoggle into the config
 - modularization
 - how to have different monitor and resolution setup for different machines with hyprland
-- hyprland binds for resizing windows
