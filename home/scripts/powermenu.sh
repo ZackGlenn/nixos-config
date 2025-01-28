@@ -26,7 +26,7 @@ elif [ "$selection" == "$sleep" ]; then
   systemctl suspend;
   exit 1
 elif [ "$selection" == "$reboot" ]; then
-  systemctl restart;
+  systemctl reboot;
   exit 1
 elif [ "$selection" == "$shutdown" ]; then
   shutdown now
