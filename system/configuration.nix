@@ -137,12 +137,6 @@
     dataDir = "/home/zack/Sync";
   };
 
-  # Home manager config
-  home-manager = {
-    useGlobalPkgs = true;
-    users.zack = import ../home/home.nix;
-  };
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = 
