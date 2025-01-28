@@ -11,11 +11,20 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  outputs = {nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = {inherit inputs;};
       modules = [
         ./system/configuration.nix
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.zack = import ./home/home.nix;
+          home-manager.extraSpecialArgs = {
+            pkgs-unstable = import inputs.nixpkgs-unstable {system = nixpkgs.system;};
+          };
+        }
       ];
     };
   };
