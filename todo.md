@@ -13,5 +13,4 @@
 - build bluetoggle into the config
 - modularization
 - how to have different monitor and resolution setup for different machines with hyprland
-- obsidian.nvim setup
 - overhaul how nvim keybindings are organized

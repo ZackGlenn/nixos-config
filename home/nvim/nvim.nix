@@ -24,6 +24,7 @@ programs.neovim = {
       ${builtins.readFile ./aerial.lua}
       ${builtins.readFile ./ibl.lua}
       ${builtins.readFile ./project.lua}
+      ${builtins.readFile ./obsidian.lua}
     ";
 
     plugins = with pkgs.vimPlugins; [
@@ -51,6 +52,7 @@ programs.neovim = {
       mini-nvim
       project-nvim
       telescope-project-nvim
+      obsidian-nvim
 
       (nvim-treesitter.withPlugins (p: [
         p.nix

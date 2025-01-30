@@ -72,5 +72,8 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Conceal level to work with obsidian-nvim
+vim.opt.conceallevel = 1
+
 -- Set colorscheme
 vim.cmd.colorscheme("tokyonight-night")
