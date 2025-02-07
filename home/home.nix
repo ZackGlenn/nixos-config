@@ -34,6 +34,7 @@
     zathura
     webcord
     wev
+    playerctl
   ];
 
   home.pointerCursor = {
