@@ -33,6 +33,7 @@
     typst
     zathura
     webcord
+    wev
   ];
 
   home.pointerCursor = {
