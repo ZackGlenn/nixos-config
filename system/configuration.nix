@@ -148,6 +148,7 @@
     wl-clipboard
     chromium
     tokyo-night-sddm
+    usbutils
   ];
 
   # configure bash to automatically start fish
