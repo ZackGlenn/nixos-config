@@ -96,6 +96,7 @@
       variant = "";
       options = "caps:swapescape";
     };
+    wacom.enable = true;
   };
 
   # Enable SDDM
