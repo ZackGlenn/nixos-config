@@ -69,6 +69,7 @@ programs.neovim = {
         p.json
         p.query
         p.vimdoc
+        p.devicetree
       ]))
     ];
 
