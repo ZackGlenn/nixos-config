@@ -53,6 +53,7 @@ programs.neovim = {
       project-nvim
       telescope-project-nvim
       obsidian-nvim
+      qmk-nvim
 
       (nvim-treesitter.withPlugins (p: [
         p.nix
