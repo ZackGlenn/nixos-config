@@ -35,6 +35,7 @@
     webcord
     wev
     playerctl
+    rink
   ];
 
   home.pointerCursor = {
