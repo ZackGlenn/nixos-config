@@ -1,6 +1,5 @@
 # TODO
 
-- cmp keymaps
 - look into code overview functionality
 - trashing system
 - joshuto themeing
