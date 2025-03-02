@@ -9,6 +9,7 @@
     ./lazygit.nix
     ./fish.nix
     ./scripts/scripts.nix
+    ./hyprland.nix
   ];
 
   home.packages = with pkgs; [
@@ -36,6 +37,8 @@
     wev
     playerctl
     rink
+    wl-kbptr
+    wlrctl
   ];
 
   home.pointerCursor = {
@@ -89,10 +92,6 @@
     dunst.enable = true;
     playerctld.enable = true;
   };
-
-  # Configure hyprland
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = import ./hyprland.nix;
 
   home.activation = {
   # Workaround for tofi not recognizing changes to .desktop files
