@@ -11,6 +11,12 @@ wayland.windowManager.hyprland = {
     # See https://wiki.hyprland.org/Configuring/Monitors/
     monitor = ", preferred, auto, 1.25";
 
+    # Don't scale xwayland windows
+    # fixes fonts being pixelated in xwayland
+    xwayland = {
+      force_zero_scaling = true;
+    };
+
 
     ###################
     ### MY PROGRAMS ###
