@@ -10,7 +10,6 @@
     ./fish.nix
     ./scripts/scripts.nix
     ./hyprland.nix
-    ./joshuto.nix
   ];
 
   home.packages = with pkgs; [
