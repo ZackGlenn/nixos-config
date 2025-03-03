@@ -344,4 +344,15 @@ wayland.windowManager.hyprland = {
     bind=$mainMod,f,exec,hyprctl keyword cursor:inactive_timeout 0; hyprctl keyword cursor:hide_on_key_press false; hyprctl dispatch submap cursor
   ";
 };
+services.hyprpaper = {
+  preload = [
+    "~/Pictures/wallpapers/The Way of Kings.jpg"
+    "~/Pictures/wallpapers/Rhythm of War.jpg"
+  ];
+
+  wallpaper = [
+    "eDP-1,~/Pictures/wallpapers/The Way of Kings.jpg"
+    "HDMI-A-1,~/Pictures/wallpapers/Rhythm of War.jpg"
+  ];
+};
 }
