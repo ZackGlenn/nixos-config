@@ -345,14 +345,16 @@ wayland.windowManager.hyprland = {
   ";
 };
 services.hyprpaper = {
-  preload = [
-    "~/Pictures/wallpapers/The Way of Kings.jpg"
-    "~/Pictures/wallpapers/Rhythm of War.jpg"
-  ];
-
-  wallpaper = [
-    "eDP-1,~/Pictures/wallpapers/The Way of Kings.jpg"
-    "HDMI-A-1,~/Pictures/wallpapers/Rhythm of War.jpg"
-  ];
+  enable = true;
+  settings = {
+    preload = [
+      "~/Pictures/wallpapers/The Way of Kings.jpg"
+      "~/Pictures/wallpapers/Rhythm of War.jpg"
+    ];
+    wallpaper = [
+      "eDP-1,~/Pictures/wallpapers/The Way of Kings.jpg"
+      "HDMI-A-1,~/Pictures/wallpapers/Rhythm of War.jpg"
+    ];
+  };
 };
 }
