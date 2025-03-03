@@ -1,8 +1,6 @@
 # TODO
 
 - look into code overview functionality
-- trashing system
-- joshuto themeing
 - fix visual mode comment mapping
 - wallpapers
 - hypridle

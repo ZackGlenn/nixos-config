@@ -10,12 +10,12 @@
     ./fish.nix
     ./scripts/scripts.nix
     ./hyprland.nix
+    ./joshuto.nix
   ];
 
   home.packages = with pkgs; [
     bat
     ripgrep
-    joshuto
     lxqt.lxqt-policykit
     clipse
     brightnessctl
@@ -86,6 +86,13 @@
   programs.btop = {
     enable = true;
     settings.color_theme = "tokyo-night";
+  };
+
+  programs.joshuto = {
+    enable = true;
+    settings = {
+      use_trash = false;
+    };
   };
 
   services = {
