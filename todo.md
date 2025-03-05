@@ -1,6 +1,5 @@
 # TODO
 
-- look into code overview functionality
 - fix visual mode comment mapping
 - hypridle
 - icon themes
