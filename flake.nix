@@ -30,8 +30,54 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     inherit (nixpkgs) lib;
+
+    #
+    # ========= Architectures =========
+    #
+    forAllSystems = nixpkgs.lib.genAttrs [
+      "x86_64-linux"
+      # "aarch64-linux" TODO: check correctness
+    ];
   in
   {
+    # ========= Custom Modules =========
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./modules/home-manager;
+
+    # ========= Overlays =========
+    # 
+    # Custom modifications to upstream packages
+    overlays = import ./overlays { inherit inputs; };
+
+    # ========= Custom Packages =========
+    packages = forAllSystems (
+      system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ self.overlays.default ];
+        };
+      in
+      nixpkgs.lib.packagesFromDirectoryRecursive {
+        callPackage = nixpkgs.lib.callPackageWith pkgs;
+        directory = ./pkgs/common;
+      }
+    );
+
+    # ========= Scripts =========
+    scripts = import ./scripts;
+
+    # ========= Formatter =========
+    # TODO:
+
+    # ========= DevShell =========
+    devShells = forAllSystems (
+      system:
+      import ./shell.nix {
+        pkgs = nixpkgs.legacyPackages.${system};
+      }
+    );
+
     #
     # ========= Host Configurations =========
     #
