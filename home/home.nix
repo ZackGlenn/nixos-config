@@ -38,6 +38,8 @@
     rink
     wl-kbptr
     wlrctl
+    zip
+    unzip
   ];
 
   home.pointerCursor = {
