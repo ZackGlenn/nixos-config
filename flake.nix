@@ -29,7 +29,8 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
-    inherit (nixpkgs) lib;
+    inherit (self) outputs;
+    lib = nixpkgs.lib // home-manager.lib;
 
     #
     # ========= Architectures =========
@@ -82,20 +83,22 @@
     # ========= Host Configurations =========
     #
     nixosConfigurations = {
+      # laptop
       laptop = lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./system/configuration.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.zack = import ./home/home.nix;
-            home-manager.extraSpecialArgs = {
-              pkgs-stable = import inputs.pkgs-stable {system = nixpkgs.system;};
-              pkgs-unstable = import inputs.pkgs-unstable {system = nixpkgs.system;};
-            };
-          }
-        ];
+        modules = [ ./hosts/laptop ];
+        specialArgs = {inherit inputs outputs;};
+      };
+    };
+
+    #
+    # ========= User-Level Home-Manager Configurations ========
+    #
+    # Available through `home-manager --flake .#primary-username@hostname`
+    # Typically adopted using `home-manager switch --flake .#primary-username@hostname`
+    homeConfigurations = {
+      "zack@laptop" = lib.homeManagerConfiguration {
+        modules = [ ./home/zack/laptop.nix ];
+        pgks = self.packages.x86_64-linux;
       };
     };
   };
