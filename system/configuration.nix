@@ -141,6 +141,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = 
+  # TODO: put tokyo-night-sddm in the overlays or something
   let tokyo-night-sddm = pkgs.libsForQt5.callPackage ../pkgs/tokyo-night-sddm.nix {}; in
   with pkgs; [
     neovim
