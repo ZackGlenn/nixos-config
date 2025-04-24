@@ -36,6 +36,6 @@ in
 
   (additions final prev)
   // (modifications final prev)
-  // (stable final prev)
-  // (unstable final prev);
+  // (stable-packages final prev)
+  // (unstable-packages final prev);
 }
