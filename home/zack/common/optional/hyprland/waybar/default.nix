@@ -4,7 +4,7 @@ programs.waybar = {
   enable = true;
   systemd.enable = true;
   style = "
-    ${builtins.readFile ../style/tokyonight.css}
+    ${builtins.readFile ./tokyonight.css}
     ${builtins.readFile ./style.css}
   ";
   settings = {
