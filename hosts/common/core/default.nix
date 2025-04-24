@@ -8,6 +8,8 @@
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;

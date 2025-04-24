@@ -7,6 +7,5 @@
     packages = [ pkgs.home-manager ];
   };
 
-
   home-manager.users.zack = import ../../../../home/zack/${config.networking.hostName}.nix;
 }
