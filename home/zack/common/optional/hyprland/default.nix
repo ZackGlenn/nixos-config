@@ -4,7 +4,10 @@ imports = [
   ./waybar
 ];
 
-home.packages = [ pkgs.hyprcursor ];
+home.packages = with pkgs; [
+  hyprcursor
+  powermenu
+];
 
 gtk = {
   enable = true;

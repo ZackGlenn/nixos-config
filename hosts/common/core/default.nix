@@ -12,7 +12,7 @@
   home-manager.useUserPackages = true;
 
   nixpkgs = {
-    overlays = builtins.attrValues outputs.overlays;
+    overlays = [ outputs.overlays.default ];
     config = {
       allowUnfree = true;
     };

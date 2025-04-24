@@ -98,7 +98,7 @@
     homeConfigurations = {
       "zack@laptop" = lib.homeManagerConfiguration {
         modules = [ ./home/zack/laptop.nix ];
-        pgks = self.packages.x86_64-linux;
+        pkgs = self.packages.x86_64-linux;
       };
     };
   };
