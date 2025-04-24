@@ -1,6 +1,31 @@
-{...}:
+{ pkgs, ... }: {
 
-{
+imports = [
+  ./waybar
+];
+
+home.packages = [ pkgs.hyprcursor ];
+
+gtk = {
+  enable = true;
+  theme = {
+    package = pkgs.tokyonight-gtk-theme;
+    name = "Tokyonight-Dark";
+  };
+  font = {
+    name = "Sans";
+    size = 11;
+  };
+};
+
+qt = {
+  enable = true;
+  platformTheme.name = "gtk";
+  style.name = "gtk2";
+};
+
+services.dunst.enable = true;
+
 wayland.windowManager.hyprland = {
   enable = true;
   settings = {
