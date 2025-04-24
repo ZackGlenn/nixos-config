@@ -5,21 +5,21 @@
     common/core
 
     # ========= Host-specific Optional Configs =========
-    optional/hyprland
-    optional/blueman.nix
-    optional/brightnessctl.nix
-    optional/cli-fun.nix
-    optional/keepassxc.nix
-    optional/kitty.nix
-    optional/lazygit.nix
-    optional/media.nix
-    optional/obsidian.nix
-    optional/qutebrowser.nix
-    optional/rink.nix
-    optional/tofi.nix
-    optional/typst.nix
-    optional/wayland.nix
-    optional/webcord.nix
-    optional/zathura.nix
+    common/optional/hyprland
+    common/optional/blueman.nix
+    common/optional/brightnessctl.nix
+    common/optional/cli-fun.nix
+    common/optional/keepassxc.nix
+    common/optional/kitty.nix
+    common/optional/lazygit.nix
+    common/optional/media.nix
+    common/optional/obsidian.nix
+    common/optional/qutebrowser.nix
+    common/optional/rink.nix
+    common/optional/tofi.nix
+    common/optional/typst.nix
+    common/optional/wayland.nix
+    common/optional/webcord.nix
+    common/optional/zathura.nix
   ];
 }
