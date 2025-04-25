@@ -30,7 +30,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     inherit (self) outputs;
-    lib = nixpkgs.lib // home-manager.lib;
+    inherit (nixpkgs) lib;
 
     #
     # ========= Architectures =========
@@ -40,7 +40,6 @@
       # "aarch64-linux" TODO: check correctness
     ];
   in {
-    inherit lib;
 
     # ========= Custom Modules =========
     nixosModules = import ./modules/nixos;
@@ -88,18 +87,6 @@
       laptop = lib.nixosSystem {
         modules = [ ./hosts/laptop ];
         specialArgs = {inherit inputs outputs;};
-      };
-    };
-
-    #
-    # ========= User-Level Home-Manager Configurations ========
-    #
-    # Available through `home-manager --flake .#primary-username@hostname`
-    # Typically adopted using `home-manager switch --flake .#primary-username@hostname`
-    homeConfigurations = {
-      "zack@laptop" = lib.homeManagerConfiguration {
-        modules = [ ./home/zack/laptop.nix ];
-        pkgs = self.packages.x86_64-linux;
       };
     };
   };
