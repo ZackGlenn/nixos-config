@@ -35,7 +35,7 @@
     #
     # ========= Architectures =========
     #
-    forAllSystems = nixpkgs.lib.genAttrs [
+    forAllSystems = lib.genAttrs [
       "x86_64-linux"
       # "aarch64-linux" TODO: check correctness
     ];
@@ -59,8 +59,8 @@
           overlays = [ self.overlays.default ];
         };
       in
-      nixpkgs.lib.packagesFromDirectoryRecursive {
-        callPackage = nixpkgs.lib.callPackageWith pkgs;
+      lib.packagesFromDirectoryRecursive {
+        callPackage = lib.callPackageWith pkgs;
         directory = ./pkgs/common;
       }
     );
