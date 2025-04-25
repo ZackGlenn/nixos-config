@@ -39,8 +39,9 @@
       "x86_64-linux"
       # "aarch64-linux" TODO: check correctness
     ];
-  in
-  {
+  in {
+    inherit lib;
+
     # ========= Custom Modules =========
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
