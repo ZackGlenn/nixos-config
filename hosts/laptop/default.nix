@@ -21,6 +21,7 @@
     ../common/optional/jetbrainsmono.nix
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
+    ../common/optional/services/openssh.nix
 
     # ========= Users to Create =========
     ../common/users/zack
