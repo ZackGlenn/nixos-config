@@ -2,7 +2,7 @@ keys:
   -&users:
     - &zack age1h220jmw3ntsjfgfv7gjt9sksxc4jnckx6zkwvsf0f8emt7ahn9gsshvv54
   -&hosts:
-    - &laptop age158g73fxpt89c4qeegcjewt8kaw7aqandcnzacdf0yn7l9hwh545s360glr
+    - &laptop age1dfwn5ee7gqd9f7te8qrk39qah768wttsmapt8wwj08jv9z22td4s20xyuy
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:

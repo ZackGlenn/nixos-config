@@ -23,6 +23,9 @@
     ../common/optional/networkmanager.nix
     ../common/optional/services/openssh.nix
 
+    # ========= Host-unique Configs =========
+    ./syncthing
+
     # ========= Users to Create =========
     ../common/users/zack
   ];

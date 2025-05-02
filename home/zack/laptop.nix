@@ -21,5 +21,6 @@
     common/optional/wayland.nix
     common/optional/webcord.nix
     common/optional/zathura.nix
+    common/optional/sops.nix
   ];
 }
