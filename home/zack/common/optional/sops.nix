@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, hostName, ... }: {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
   ];
@@ -11,8 +11,8 @@
     validateSopsFiles = false;
 
     secrets = {
-      "private_keys/${config.networking.hostname}" = {
-        path = "/home/zack/.ssh/id_${config.networking.hostname}";
+      "private_keys/${hostName}" = {
+        path = "/home/zack/.ssh/id_${hostName}";
       };
     };
   };
