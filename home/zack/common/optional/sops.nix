@@ -12,7 +12,7 @@
 
     secrets = {
       "private_keys/zack" = {
-        path = "/home/zack/.ssh/id_ed25519";
+        path = "/home/zack/.ssh/id_pi";
       };
     };
   };
