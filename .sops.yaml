@@ -3,9 +3,11 @@ keys:
     - &zack age1h220jmw3ntsjfgfv7gjt9sksxc4jnckx6zkwvsf0f8emt7ahn9gsshvv54
   -&hosts:
     - &laptop age1dfwn5ee7gqd9f7te8qrk39qah768wttsmapt8wwj08jv9z22td4s20xyuy
+    - &pi age1cvug9aprly32vscr0n9yhzv5ss5jhc42lt76cu9zw5wq7k6u89ts5uw9yl
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
       - age:
         - *zack
         - *laptop
+        - *pi
