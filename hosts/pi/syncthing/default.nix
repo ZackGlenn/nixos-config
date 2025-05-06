@@ -1,6 +1,6 @@
 { config, ... }: {
   sops.secrets = {
-    "syncthing_keys/laptop" = {
+    "syncthing_keys/pi" = {
       owner = config.users.users.zack.name;
       inherit (config.users.users.zack) group;
     };
@@ -10,22 +10,22 @@
     enable = true;
     user = "zack";
     openDefaultPorts = true;
-    key = "${config.sops.secrets."syncthing_keys/laptop".path}";
+    key = "${config.sops.secrets."syncthing_keys/pi".path}";
     cert = "./cert.pem";
 
     settings = {
       devices = {
         "phone" = { id = "YSGEWCQ-N2XFQMW-ULNQJZ6-DMHIA4K-G6RDIBT-MCIE6SM-4TPXIRO-PCJ3ZAG"; };
-        "pi" = { id = "BFA6X4Z-IQR3XPT-7YFFU6U-VYZEBOS-2F7FANY-XN5Q3SR-4HGPBQJ-4Q452QD"; };
+        "laptop" = { id = "VWFAZFR-6B5QHHH-NMXYXXN-W4VXUBL-L3SKGKY-AZJPGQQ-45K47GN-4Y3CVQJ"; };
       };
       folders = {
         "TheVault" = {
           path = "/home/zack/Sync/TheVault/";
-          devices = [ "phone" "pi" ];
+          devices = [ "phone" "laptop" ];
         };
         "Passwords" = {
           path = "/home/zack/Sync/Passwords/";
-          devices = [ "phone" "pi" ];
+          devices = [ "phone" "laptop" ];
         };
       };
       

@@ -37,7 +37,7 @@
     #
     forAllSystems = lib.genAttrs [
       "x86_64-linux"
-      # "aarch64-linux" TODO: check correctness
+      "aarch64-linux"
     ];
   in {
 
@@ -85,8 +85,16 @@
     nixosConfigurations = {
       # laptop
       laptop = lib.nixosSystem {
+        system = "x86_64-linux";
         modules = [ ./hosts/laptop ];
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = { inherit inputs outputs; };
+      };
+
+      # Raspberry Pi
+      pi = lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = [ ./hosts/pi ];
+        specialARgs = { inherit inputs outputs; };
       };
     };
   };
