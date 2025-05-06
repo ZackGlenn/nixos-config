@@ -1,4 +1,4 @@
-{pkgs, inputs, outputs, ...}: {
+{pkgs, inputs, outputs, config, ...}: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./locale.nix
@@ -7,7 +7,10 @@
     ./neovim.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
-  home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  home-manager.extraSpecialArgs = {
+    inherit inputs outputs;
+    inherit (config.networking) hostName;
+  };
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
 
