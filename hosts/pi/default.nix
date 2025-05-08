@@ -1,7 +1,7 @@
 #
 # ========= Pi - Tiny Home Server =========
 #
-{inputs, ...}: {
+{ inputs, pkgs, ... }: {
   imports = [
     # ========= Hardware Modules =========
     inputs.hardware.nixosModules.raspberry-pi-4
@@ -37,6 +37,8 @@
     device = "/swapfile";
     size = 8 * 1024; # 8GB
   }];
+
+  environment.systemPackages = [ pkgs.libraspberrypi ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
