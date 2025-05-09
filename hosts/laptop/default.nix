@@ -14,6 +14,7 @@
 
     # ========= Host-specific Optional Configs =========
     ../common/optional/hyprland.nix
+    ../common/optional/ydotool.nix
     ../common/optional/services/pipewire.nix
     ../common/optional/bluetooth.nix
     ../common/optional/swaylock.nix
