@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   sops.secrets = {
     "dynu-password" = {
       owner = config.users.users.zack.name;
@@ -16,8 +16,9 @@
   };
 
   systemd.services."ip-update" = {
-    script = "#!/bin/sh
-echo url=\"https://api.dynu.com/nic/update?Emerald101&password=${builtins.readFile config.sops.secrets.dynu-password.path}\" | curl -k -";
+    script = "#!/usr/bin/env bash
+password=$(cat ${config.sops.secrets.dynu-password.path})
+${pkgs.curl}/bin/curl -k \"https://api.dynu.com/nic/update?username=Emerald101&password=$password\"";
     serviceConfig = {
       Type = "oneshot";
       User = "root";
