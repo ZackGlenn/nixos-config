@@ -23,6 +23,7 @@
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
     ../common/optional/services/openssh.nix
+    ../common/optional/services/dynudns.nix
 
     # ========= Host-unique Configs =========
     ./syncthing
