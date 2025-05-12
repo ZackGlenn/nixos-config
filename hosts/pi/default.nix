@@ -28,11 +28,6 @@
     hostName = "pi";
   };
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
-
   swapDevices = [{
     device = "/swapfile";
     size = 8 * 1024; # 8GB
