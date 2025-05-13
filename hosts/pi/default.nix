@@ -6,6 +6,10 @@
     # ========= Hardware Modules =========
     inputs.hardware.nixosModules.raspberry-pi-4
 
+    # ======== Disk Layout =========
+    inputs.disko.nixosModules.disko
+    ./disks.nix
+
     # ========= Required Configs =========
     ../common/core
     ./hardware-configuration.nix
