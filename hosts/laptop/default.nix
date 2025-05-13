@@ -41,6 +41,9 @@
     efi.canTouchEfiVariables = true;
   };
 
+  # allow emulated cross-compilation
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   swapDevices = [{
     device = "/swapfile";
     size = 16 * 1024; # 16GB
