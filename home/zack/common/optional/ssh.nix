@@ -9,7 +9,7 @@
 
       Host pi-remote
         User pi
-        HostName ${config.sops.secrets.my-domain}
+        HostName ${config.sops.placeholder.my-domain}
         Port 2211
         IdentityFile ~/.ssh/id_laptop
     '';
