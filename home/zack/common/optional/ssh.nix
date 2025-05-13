@@ -13,7 +13,6 @@
         Port 2211
         IdentityFile ~/.ssh/id_laptop
     '';
-    owner = "zack";
   };
 
   programs.ssh.includes = [ "${config.sops.templates."extra_ssh_config".path}" ];
