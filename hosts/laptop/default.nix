@@ -22,6 +22,7 @@
     ../common/optional/jetbrainsmono.nix
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
+    ../common/optional/ssh.nix
     ../common/optional/services/openssh.nix
 
     # ========= Host-unique Configs =========

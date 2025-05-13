@@ -14,6 +14,7 @@
       "private_keys/${hostName}" = {
         path = "/home/zack/.ssh/id_${hostName}";
       };
+      my-domain = {};
     };
   };
 }
