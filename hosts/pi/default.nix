@@ -15,7 +15,8 @@
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
     ../common/optional/services/openssh.nix
-    ../common/optional/services/dynudns.nix.nix
+    ../common/optional/services/dynudns.nix
+    ../common/optional/services/audiobookshelf.nix
 
     # ========= Host-unique Configs =========
     ./syncthing
