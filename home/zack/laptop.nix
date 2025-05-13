@@ -22,5 +22,6 @@
     ./common/optional/webcord.nix
     ./common/optional/zathura.nix
     ./common/optional/sops.nix
+    ./common/optional/ssh.nix
   ];
 }

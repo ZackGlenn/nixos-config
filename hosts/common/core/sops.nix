@@ -22,6 +22,7 @@
     # because they will be output to /run/secrets/secrets-for-users and only when the user is assigned to a host.
     secrets = {
       dynu-password = {};      
+      my-domain = {};      
     };
   };
 }
