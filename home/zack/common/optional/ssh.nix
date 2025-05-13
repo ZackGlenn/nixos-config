@@ -1,6 +1,5 @@
 { config, ... }: {
-
-  sops.templates."/home/zack/.ssh/config" = {
+  sops.templates."extra_ssh_config" = {
     content = ''
       Host pi
         User pi
@@ -16,4 +15,6 @@
     '';
     owner = "zack";
   };
+
+  programs.ssh.includes = [ "${config.sops.templates."extra_ssh_config".path}" ];
 }

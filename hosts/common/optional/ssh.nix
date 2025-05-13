@@ -6,12 +6,12 @@
     };
   };
 
-  sops.templates."/etc/ssh/declared_known_hosts".content = ''
+  sops.templates."declared_known_hosts".content = ''
     pi ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP1WbX6Zc7E4N0XrPDXDAq5KLZFXS0CRdQCzXjWEG3b0
     pi-remote ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP1WbX6Zc7E4N0XrPDXDAq5KLZFXS0CRdQCzXjWEG3b0
     192.168.4.11 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP1WbX6Zc7E4N0XrPDXDAq5KLZFXS0CRdQCzXjWEG3b0
     ${config.sops.secrets.my-domain} ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP1WbX6Zc7E4N0XrPDXDAq5KLZFXS0CRdQCzXjWEG3b0
     '';
 
-  programs.ssh.knownHostsFiles = [/etc/ssh/declared_known_hosts];
+  programs.ssh.knownHostsFiles = ["${config.sops.templates."declared_known_hosts".path}"];
 }
