@@ -8,4 +8,4 @@ nix run github:nix-community/nixos-anywhere -- \
   --flake 'github:ZackGlenn/nixos-config#pi' \
   -i ~/.ssh/id_laptop \
   -p 2211 \
-  root@raspberrypi
+  root@pi
