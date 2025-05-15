@@ -10,7 +10,7 @@ require("obsidian").setup({
     min_chars = 2,
   },
   new_notes_location = "current_dir",
-  disable_frontmatter = false,
+  disable_frontmatter = true,
   templates = {
     folder = "templates",
   },
