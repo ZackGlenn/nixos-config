@@ -7,6 +7,7 @@ imports = [
 home.packages = with pkgs; [
   hyprcursor
   powermenu
+  hyprpass
 ];
 
 gtk = {
