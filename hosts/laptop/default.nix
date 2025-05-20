@@ -13,9 +13,10 @@
     ./hardware-configuration.nix
 
     # ========= Host-specific Optional Configs =========
+    ../common/optional/services/pipewire.nix
+    ../common/optional/services/openssh.nix
     ../common/optional/hyprland.nix
     ../common/optional/ydotool.nix
-    ../common/optional/services/pipewire.nix
     ../common/optional/bluetooth.nix
     ../common/optional/swaylock.nix
     ../common/optional/sddm.nix
@@ -23,10 +24,11 @@
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
     ../common/optional/ssh.nix
-    ../common/optional/services/openssh.nix
+    ../common/optional/steam.nix
 
     # ========= Host-unique Configs =========
     ./syncthing
+    ./nvidia.nix
 
     # ========= Users to Create =========
     ../common/users/zack
