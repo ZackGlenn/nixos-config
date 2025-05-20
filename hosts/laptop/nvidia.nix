@@ -5,7 +5,7 @@
     prime = {
       offload = {
         enable = true;
-        enabledoffloadCmd = true;
+        enableOffloadCmd = true;
       };
 
       intelBusId = "PCI:2:0:0";
