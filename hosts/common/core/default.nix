@@ -18,6 +18,7 @@
     overlays = [ outputs.overlays.default ];
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [ "electron-33.4.11" ];
     };
   };
 }
