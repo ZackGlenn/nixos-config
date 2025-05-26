@@ -28,7 +28,7 @@
 
     # ========= Host-unique Configs =========
     ./syncthing
-    ./nvidia.nix
+    # ./nvidia.nix
 
     # ========= Users to Create =========
     ../common/users/zack
