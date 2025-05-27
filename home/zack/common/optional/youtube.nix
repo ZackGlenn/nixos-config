@@ -2,6 +2,5 @@
   home.packages = with pkgs; [
     youtube-tui
     mpv
-    ytermusic
   ];
 }
