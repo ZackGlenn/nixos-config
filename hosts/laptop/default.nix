@@ -20,7 +20,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/swaylock.nix
     ../common/optional/sddm.nix
-    ../common/optional/jetbrainsmono.nix
+    ../common/optional/fonts.nix
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
     ../common/optional/ssh.nix

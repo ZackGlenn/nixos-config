@@ -15,7 +15,7 @@
     ./hardware-configuration.nix
 
     # ========= Host-specific Optional Configs =========
-    ../common/optional/jetbrainsmono.nix
+    ../common/optional/fonts.nix
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
     ../common/optional/services/openssh.nix
