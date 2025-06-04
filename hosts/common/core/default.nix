@@ -5,6 +5,7 @@
     ./nix.nix
     ./sops.nix
     ./neovim.nix
+    ./nvd.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = {
