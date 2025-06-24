@@ -11,7 +11,7 @@
     validateSopsFiles = false;
 
     secrets = {
-      "private_keys/${hostName}" = {
+      "private_keys/zack" = {
         path = "/home/zack/.ssh/id_zack";
       };
     };
