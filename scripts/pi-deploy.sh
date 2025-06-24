@@ -6,6 +6,6 @@ nix run github:nix-community/nixos-anywhere -- \
   --extra-files ./pi-files \
   --generate-hardware-config nixos-generate-config ./hosts/pi/hardware-configuration.nix \
   --flake 'github:ZackGlenn/nixos-config#pi' \
-  -i ~/.ssh/id_laptop \
+  -i ~/.ssh/id_zack \
   -p 2211 \
   root@pi

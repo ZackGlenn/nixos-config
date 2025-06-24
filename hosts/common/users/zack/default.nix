@@ -10,7 +10,7 @@
     # TODO: figure out if this is the right way to handle the ydotool group
     extraGroups = [ "networkmanager" "wheel" "ydotool" ];
     openssh.authorizedKeys.keys = [
-      (builtins.readFile ./keys/id_laptop.pub)
+      (builtins.readFile ./keys/id_zack.pub)
     ];
     packages = [ pkgs.home-manager ];
   };
