@@ -4,10 +4,10 @@
 {inputs, ...}: {
   imports = [
     # ========= Hardware Modules =========
-    inputs.hardware.nixosModules.common-pc-laptop
-    inputs.hardware.nixosModules.common-cpu-intel
-    inputs.hardware.nixosModules.common-gpu-intel
+    inputs.hardware.nixosModules.common-cpu-amd
+    inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
+    inputs.hardware.nixosModules.gigabyte-b650
 
     # ========= Required Configs =========
     ../common/core
@@ -29,14 +29,13 @@
 
     # ========= Host-unique Configs =========
     ./syncthing
-    # ./nvidia.nix
 
     # ========= Users to Create =========
     ../common/users/zack
   ];
 
   networking = {
-    hostName = "laptop";
+    hostName = "peregrine";
   };
 
   boot.loader = {
