@@ -25,6 +25,7 @@ programs.neovim = {
       ${builtins.readFile ./ibl.lua}
       ${builtins.readFile ./project.lua}
       ${builtins.readFile ./obsidian.lua}
+      ${builtins.readFile ./qmk.lua}
     ";
 
     plugins = with pkgs.vimPlugins; [
