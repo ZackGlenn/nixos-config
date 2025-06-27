@@ -1,7 +1,7 @@
 #
 # ========= Laptop - Main Machine =========
 #
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [
     # ========= Hardware Modules =========
     inputs.hardware.nixosModules.common-cpu-amd
@@ -37,6 +37,8 @@
   networking = {
     hostName = "peregrine";
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.loader = {
     systemd-boot.enable = true;
