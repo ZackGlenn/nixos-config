@@ -4,6 +4,7 @@ keys:
   -&hosts:
     - &laptop age1dfwn5ee7gqd9f7te8qrk39qah768wttsmapt8wwj08jv9z22td4s20xyuy
     - &pi age1cvug9aprly32vscr0n9yhzv5ss5jhc42lt76cu9zw5wq7k6u89ts5uw9yl
+    - &peregrine age18h7trkg4gqk5yjv6ec8saskq44l298mljrcsh5xqxal8ugc92qcqu9w8he
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
@@ -11,3 +12,4 @@ creation_rules:
         - *zack
         - *laptop
         - *pi
+        - *peregrine
