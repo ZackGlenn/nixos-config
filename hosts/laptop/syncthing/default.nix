@@ -17,7 +17,7 @@
       devices = {
         "phone" = { id = "YSGEWCQ-N2XFQMW-ULNQJZ6-DMHIA4K-G6RDIBT-MCIE6SM-4TPXIRO-PCJ3ZAG"; };
         "pi" = { id = "BFA6X4Z-IQR3XPT-7YFFU6U-VYZEBOS-2F7FANY-XN5Q3SR-4HGPBQJ-4Q452QD"; };
-        "peregrine" = { id = "MHFOPMG-NIAIGPT-D3WHEDX-IRZAIA5-IBI73W2-M27AT6X-YAZ7FFI-UQELUAE"; };
+        "peregrine" = { id = "3IOF6JH-MGDQY2H-XRWWJGM-P5MNGY6-H46HF3N-VJAFP6W-IE4TZUQ-MZ7XFAK"; };
       };
       folders = {
         "TheVault" = {
