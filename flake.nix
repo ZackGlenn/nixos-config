@@ -88,6 +88,13 @@
     # ========= Host Configurations =========
     #
     nixosConfigurations = {
+      # desktop
+      peregrine = lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./hosts/peregrine ];
+        specialArgs = { inherit inputs outputs; };
+      };
+
       # laptop
       laptop = lib.nixosSystem {
         system = "x86_64-linux";
