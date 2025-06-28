@@ -16,6 +16,7 @@
     # ========= Host-specific Optional Configs =========
     ../common/optional/services/pipewire.nix
     ../common/optional/services/openssh.nix
+    ../common/optional/services/openrgb.nix
     ../common/optional/hyprland.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
