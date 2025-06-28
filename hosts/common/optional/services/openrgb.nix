@@ -7,6 +7,7 @@
     script = ''
       ${pkgs.openrgb}/bin/openrgb --mode static --color white
     '';
-    partOf = [ "openrgb.service" ];
+  wantedBy = [ "multi-user.target" ];
+  after = ["openrgb.service"];
   };
 }
