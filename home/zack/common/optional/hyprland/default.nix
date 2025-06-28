@@ -57,7 +57,7 @@ wayland.windowManager.hyprland = {
 
     "$terminal" = "kitty";
     "$fileManager" = "kitty joshuto";
-    "$browser" = "qutebrowser";
+    "$browser" = "QTWEBENGINE_FORCE_USE_GBM=0 qutebrowser";
     "$menu" = "tofi-drun | xargs hyprctl dispatcher exec --";
     "$menu_full" = "tofi-run | xargs hyprctl dispatcher exec --";
 
