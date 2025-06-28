@@ -5,7 +5,7 @@
 
   systemd.services.set_rgb = {
     script = ''
-      ${pkgs.openrgb} --mode static --color white
+      ${pkgs.openrgb}/bin/openrgb --mode static --color white
     '';
     partOf = [ "openrgb.service" ];
   };
