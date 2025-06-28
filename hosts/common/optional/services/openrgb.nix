@@ -1,12 +1,12 @@
-{...}: {
+{ pkgs, ... }: {
   services.hardware.openrgb = {
     enable = true;
   };
 
   systemd.user.services.set_rgb = {
     script = ''
-      openrbg --color white
+      ${pkgs.openrgb} --mode static --color white
     '';
-    partOf = [ "openrbg.service" ];
+    partOf = [ "openrgb.service" ];
   };
 }
