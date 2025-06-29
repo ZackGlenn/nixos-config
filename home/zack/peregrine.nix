@@ -24,5 +24,6 @@
     ./common/optional/sops.nix
     ./common/optional/youtube.nix
     ./common/optional/chromium.nix
+    ./common/optional/ssh.nix
   ];
 }
