@@ -16,6 +16,7 @@
     # ========= Host-specific Optional Configs =========
     ../common/optional/services/pipewire.nix
     ../common/optional/services/openssh.nix
+    ../common/optional/services/mySync.nix
     ../common/optional/hyprland.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
@@ -34,6 +35,12 @@
     # ========= Users to Create =========
     ../common/users/zack
   ];
+
+  mySync = {
+    hostName = "laptop";
+    user = "zack";
+    sync_to = [ "phone" "peregrine" "pi" ];
+  };
 
   networking = {
     hostName = "laptop";

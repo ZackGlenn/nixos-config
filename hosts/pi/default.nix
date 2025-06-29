@@ -15,12 +15,13 @@
     ./hardware-configuration.nix
 
     # ========= Host-specific Optional Configs =========
-    ../common/optional/fonts.nix
-    ../common/optional/git.nix
-    ../common/optional/networkmanager.nix
     ../common/optional/services/openssh.nix
     ../common/optional/services/dynudns.nix
     ../common/optional/services/audiobookshelf.nix
+    ../common/optional/services/mySync.nix
+    ../common/optional/fonts.nix
+    ../common/optional/git.nix
+    ../common/optional/networkmanager.nix
 
     # ========= Host-unique Configs =========
     ./syncthing
@@ -28,6 +29,12 @@
     # ========= Users to Create =========
     ../common/users/zack
   ];
+
+  mySync = {
+    hostName = "pi";
+    user = "zack";
+    sync_to = [ "phone" "laptop" "peregrine" ];
+  };
 
   networking = {
     hostName = "pi";

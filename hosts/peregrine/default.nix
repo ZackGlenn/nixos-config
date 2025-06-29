@@ -17,6 +17,7 @@
     ../common/optional/services/pipewire.nix
     ../common/optional/services/openssh.nix
     ../common/optional/services/openrgb.nix
+    ../common/optional/services/mySync.nix
     ../common/optional/hyprland.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
@@ -28,12 +29,15 @@
     ../common/optional/ssh.nix
     ../common/optional/steam.nix
 
-    # ========= Host-unique Configs =========
-    ./syncthing
-
     # ========= Users to Create =========
     ../common/users/zack
   ];
+
+  mySync = {
+    hostName = "peregrine";
+    user = "zack";
+    sync_to = [ "phone" "laptop" "pi" ];
+  };
 
   networking = {
     hostName = "peregrine";
