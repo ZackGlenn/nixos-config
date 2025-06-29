@@ -24,7 +24,6 @@
     ../common/optional/networkmanager.nix
 
     # ========= Host-unique Configs =========
-    ./syncthing
 
     # ========= Users to Create =========
     ../common/users/zack

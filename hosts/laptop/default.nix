@@ -29,7 +29,6 @@
     ../common/optional/steam.nix
 
     # ========= Host-unique Configs =========
-    ./syncthing
     # ./nvidia.nix
 
     # ========= Users to Create =========
