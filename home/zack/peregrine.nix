@@ -25,5 +25,6 @@
     ./common/optional/youtube.nix
     ./common/optional/chromium.nix
     ./common/optional/ssh.nix
+    ./common/optional/mangohud.nix
   ];
 }
