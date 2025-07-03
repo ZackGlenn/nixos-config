@@ -27,5 +27,6 @@
     ./common/optional/ssh.nix
     ./common/optional/mangohud.nix
     ./common/optional/scarab.nix
+    ./common/optional/udiskie.nix
   ];
 }
