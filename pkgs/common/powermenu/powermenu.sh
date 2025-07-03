@@ -17,7 +17,7 @@ $shutdown
 selection=$(echo "$options" | tofi)
 
 if [ "$selection" == "$lock" ]; then
-  swaylock -f
+  hyprlock
   exit 1
 elif [ "$selection" == "$logout" ]; then
   hyprctl dispatch exit

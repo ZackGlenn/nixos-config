@@ -21,7 +21,7 @@
     ../common/optional/hyprland.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
-    ../common/optional/swaylock.nix
+    ../common/optional/hyprlock.nix
     ../common/optional/sddm.nix
     ../common/optional/fonts.nix
     ../common/optional/git.nix

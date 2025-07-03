@@ -30,6 +30,8 @@ qt = {
 
 services.dunst.enable = true;
 
+programs.hyprlock.enable = true;
+
 wayland.windowManager.hyprland = {
   enable = true;
   settings = {
