@@ -8,6 +8,7 @@ home.packages = with pkgs; [
   hyprcursor
   powermenu
   hyprpass
+  bluetoggle
 ];
 
 gtk = {
@@ -209,6 +210,7 @@ wayland.windowManager.hyprland = {
       "$mainMod, V, togglefloating,"
       "$mainMod, R, exec, $menu"
       "$mainMod, X, exec, powermenu"
+      "$mainMod, C, exec, bluetoggle B8:7B:D4:15:C5:5D"
       "$mainMod SHIFT, R, exec, $menu_full"
       "$mainMod, A, exec, hyprpass -d ~/Sync/Passwords/Passwords.kdbx"
       "$mainMod SHIFT, A, exec, hyprpass -p -d ~/Sync/Passwords/Passwords.kdbx"
