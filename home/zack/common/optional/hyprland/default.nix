@@ -383,6 +383,7 @@ wayland.windowManager.hyprland = {
     bind=$mainMod,f,exec,hyprctl keyword cursor:inactive_timeout 0; hyprctl keyword cursor:hide_on_key_press false; hyprctl dispatch submap cursor
   ";
 };
+
 services.hyprpaper = {
   enable = true;
   settings = {
