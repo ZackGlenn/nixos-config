@@ -2,6 +2,7 @@
 
 imports = [
   ./waybar
+  ./hyprlock.nix
 ];
 
 home.packages = with pkgs; [
@@ -30,8 +31,6 @@ qt = {
 };
 
 services.dunst.enable = true;
-
-programs.hyprlock.enable = true;
 
 wayland.windowManager.hyprland = {
   enable = true;
