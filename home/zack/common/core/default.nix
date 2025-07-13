@@ -6,7 +6,7 @@
     ./git.nix
     ./fonts.nix
     ./btop.nix
-    ./joshuto.nix
+    ./yazi.nix
     ./nvim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
