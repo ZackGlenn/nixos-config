@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./binds.nix
   ];
 
   programs.niri = {
