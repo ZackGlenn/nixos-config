@@ -1,7 +1,7 @@
 {pkgs, inputs, outputs, config, ...}: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    inputs.niri.nixosModules.niri
+    inputs.niri-flake.nixosModules.niri
     ./locale.nix
     ./nix.nix
     ./sops.nix
