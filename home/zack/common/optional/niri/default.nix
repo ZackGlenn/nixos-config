@@ -7,6 +7,10 @@
     ./layout.nix
     ./options.nix
     ./window-rule.nix
+    ./layer-rule.nix
+    ./animations.nix
+    ./gestures.nix
+    ./debug.nix
   ];
 
   programs.niri = {
