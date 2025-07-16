@@ -7,6 +7,7 @@
     # ========= Host-specific Optional Configs =========
     ./common/optional/hyprland
     ./common/optional/hyprland/peregrine.nix
+    ./common/optional/dunst.nix
     ./common/optional/blueman.nix
     ./common/optional/brightnessctl.nix
     ./common/optional/cli-fun.nix

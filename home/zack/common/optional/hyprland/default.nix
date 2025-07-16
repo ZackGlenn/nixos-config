@@ -5,7 +5,6 @@ imports = [
   ./hyprlock.nix
   ./gtk.nix
   ./qt.nix
-  ./dunst.nix
   ./variables.nix
   ./autostart.nix
   ./keybinds.nix
