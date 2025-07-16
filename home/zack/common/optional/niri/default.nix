@@ -3,6 +3,7 @@
     ./binds.nix
     ./input.nix
     ./output.nix
+    ./environment.nix
     ./switch-events.nix
     ./layout.nix
     ./options.nix

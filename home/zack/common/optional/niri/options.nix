@@ -1,8 +1,11 @@
 {...}: {
 programs.niri.settings = {
   spawn-at-startup = [
-    "waybar"
+    "xwayland-sattelite"
+    "lxqt-policykit-agent"
+    # "waybar"
     "kitty"
+    "qutebrowser --nowindow" # autostart qb to improve time opening first window
   ];
 
   hotkey-overlay = {
