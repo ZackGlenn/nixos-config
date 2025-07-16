@@ -29,5 +29,6 @@
     ./common/optional/mangohud.nix
     ./common/optional/lumafly.nix
     ./common/optional/udiskie.nix
+    ./common/optional/audacity.nix
   ];
 }
