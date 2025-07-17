@@ -26,5 +26,6 @@
     ./common/optional/sops.nix
     ./common/optional/youtube.nix
     ./common/optional/udiskie.nix
+    ./common/optional/audacity.nix
   ];
 }
