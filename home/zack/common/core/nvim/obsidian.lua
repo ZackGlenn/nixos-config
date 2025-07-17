@@ -20,12 +20,12 @@ require("obsidian").setup({
   ui = {
     enable = true,
   },
+  legacy_commands = false,
 })
 
-vim.keymap.set("n", "<leader>oo", "<Cmd>ObsidianOpen<CR>", { desc = "[O]pen in [O]bsidian" })
-vim.keymap.set("n", "<leader>os", "<Cmd>ObsidianSearch<CR>", { desc = "[O]bsidian [s]earch" })
-vim.keymap.set("n", "<leader>of", "<Cmd>ObsidianFollowLink<CR>", { desc = "[O]bsidian [f]ollow link" })
-vim.keymap.set("n", "<leader>ob", "<Cmd>ObsidianBacklinks<CR>", { desc = "[O]bsidian [b]acklinks" })
-vim.keymap.set("n", "<leader>ot", "<Cmd>ObsidianTags<CR>", { desc = "[O]bsidian [t]ags" })
-vim.keymap.set("n", "<leader>oT", "<Cmd>ObsidianTemplate<CR>", { desc = "[O]bsidian [t]emplate" })
-vim.keymap.set("n", "<leader>oT", "<Cmd>ObsidianTemplate<CR>", { desc = "[O]bsidian [t]emplate" })
+vim.keymap.set("n", "<leader>oo", "<Cmd>Obsidian open<CR>", { desc = "[O]pen in [O]bsidian" })
+vim.keymap.set("n", "<leader>os", "<Cmd>Obsidian search<CR>", { desc = "[O]bsidian [s]earch" })
+vim.keymap.set("n", "<leader>of", "<Cmd>Obsidian follow_link<CR>", { desc = "[O]bsidian [f]ollow link" })
+vim.keymap.set("n", "<leader>ob", "<Cmd>Obsidian backlinks<CR>", { desc = "[O]bsidian [b]acklinks" })
+vim.keymap.set("n", "<leader>ot", "<Cmd>Obsidian tags<CR>", { desc = "[O]bsidian [t]ags" })
+vim.keymap.set("n", "<leader>oT", "<Cmd>Obsidian template<CR>", { desc = "[O]bsidian [t]emplate" })
