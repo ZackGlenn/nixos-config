@@ -5,7 +5,7 @@
     #
     # ========= Official NixOS and HM Package Sources =========
     #
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # The next two inputs are for pinning to stable or unstable regardless of what the main input is set to
     # This is useful to keep some packages on stable while testing a beta release of nixpkgs
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
@@ -13,7 +13,7 @@
 
     hardware.url = "github:nixos/nixos-hardware";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
