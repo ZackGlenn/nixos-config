@@ -127,7 +127,7 @@
     "Mod+Period".action = expel-window-from-column;
 
     "Mod+D".action       = switch-preset-column-width;
-    "Mod+Shift+D".action = switch-preset-column-height;
+    "Mod+Shift+D".action = switch-preset-window-height;
     "Mod+Ctrl+D".action  = reset-window-height;
     "Mod+F".action       = maximize-column;
     "Mod+Shift+F".action = fullscreen-window;
@@ -159,8 +159,8 @@
 
     # Actions to switch layouts
     # Make sure not to have a layout switch key in the xkb options or this will break
-    "Mod+Space".action = switch-layout-next;
-    "Mod+Shift+Space".action = switch-layout-next;
+    "Mod+Space".action = switch-layout "next";
+    "Mod+Shift+Space".action = switch-layout "prev";
 
     # Some applications such as remote-desktop clients may request that niri stops processing the keyboard
     # shortcuts defined here so they can forward the key presses.

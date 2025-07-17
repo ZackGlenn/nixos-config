@@ -1,5 +1,5 @@
 {...}: {
-programs.niri.settings.output = {
+programs.niri.settings.outputs = {
   # You can configure outputs by their name, which you can find
   # by running `niri msg outputs` while inside a niri instance.
   # The built-in laptop monitor is usually called "eDP-1".
@@ -16,14 +16,21 @@ programs.niri.settings.output = {
     # for the resolution.
     # If the mode is omitted altogether or is invalid, niri will pick one automatically.
     # Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode = "2560x1440@180";
+    mode = {
+      width = 2560;
+      height = 1440;
+      refresh = 180.0;
+    };
 
     # You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale = 1.25;
 
     # Transform allows to rotate the output counter-clockwise, valid values are:
     # normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform = "normal";
+    transform = {
+      flipped = false;
+      rotation = 0;
+    };
 
     # Position of the output in the global coordinate space.
     # This affects directional monitor actions like "focus-monitor-left", and cursor movement.

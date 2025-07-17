@@ -13,11 +13,4 @@
     ./gestures.nix
     ./debug.nix
   ];
-
-  programs.niri = {
-    enable = true;
-    settings = {
-      environment."NIXOS_OZONE_WL" = "1";
-    };
-  };
 }
