@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
   imports = [
     # ========= Required Configs =========
@@ -31,6 +31,4 @@
     ./common/optional/udiskie.nix
     ./common/optional/audacity.nix
   ];
-
-  home.packages = [ pkgs.unstable.pciutils ];
 }
