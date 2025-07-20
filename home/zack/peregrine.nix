@@ -30,5 +30,6 @@
     ./common/optional/lumafly.nix
     ./common/optional/udiskie.nix
     ./common/optional/audacity.nix
+    ./common/optional/geekbench.nix
   ];
 }
