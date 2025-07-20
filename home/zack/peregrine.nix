@@ -32,5 +32,6 @@
     ./common/optional/audacity.nix
     ./common/optional/geekbench.nix
     ./common/optional/stress.nix
+    ./common/optional/unigine.nix
   ];
 }
