@@ -1,12 +1,12 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
   imports = [
     # ========= Required Configs =========
     ./common/core
 
     # ========= Host-specific Optional Configs =========
-    ./common/optional/hyprland
-    ./common/optional/hyprland/peregrine.nix
+    # ./common/optional/hyprland
+    # ./common/optional/hyprland/peregrine.nix
     ./common/optional/niri
     ./common/optional/dunst.nix
     ./common/optional/blueman.nix
