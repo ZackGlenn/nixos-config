@@ -33,5 +33,6 @@
     ./common/optional/geekbench.nix
     ./common/optional/stress.nix
     ./common/optional/unigine.nix
+    ./common/optional/discord.nix
   ];
 }
