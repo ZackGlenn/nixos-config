@@ -30,7 +30,7 @@
     };
 
     "Mod+E" = {
-      action = spawn "yazi";
+      action = spawn "kitty" "yazi";
       hotkey-overlay.title = "Launch a File Manager: yazi";
     };
 
