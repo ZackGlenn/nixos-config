@@ -32,5 +32,9 @@
     ./common/optional/lumafly.nix
     ./common/optional/udiskie.nix
     ./common/optional/audacity.nix
+    ./common/optional/geekbench.nix
+    ./common/optional/stress.nix
+    ./common/optional/unigine.nix
+    ./common/optional/discord.nix
   ];
 }

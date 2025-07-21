@@ -39,82 +39,89 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-  let
-    inherit (self) outputs;
-    inherit (nixpkgs) lib;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+      inherit (nixpkgs) lib;
 
-    #
-    # ========= Architectures =========
-    #
-    forAllSystems = lib.genAttrs [
-      "x86_64-linux"
-      "aarch64-linux"
-    ];
-  in {
+      #
+      # ========= Architectures =========
+      #
+      forAllSystems = lib.genAttrs [
+        "x86_64-linux"
+        "aarch64-linux"
+      ];
+    in
+    {
 
-    # ========= Custom Modules =========
-    nixosModules = import ./modules/nixos;
-    homeManagerModules = import ./modules/home-manager;
+      # ========= Custom Modules =========
+      nixosModules = import ./modules/nixos;
+      homeManagerModules = import ./modules/home-manager;
 
-    # ========= Overlays =========
-    # 
-    # Custom modifications to upstream packages
-    overlays = import ./overlays { inherit inputs; };
+      # ========= Overlays =========
+      #
+      # Custom modifications to upstream packages
+      overlays = import ./overlays { inherit inputs; };
 
-    # ========= Custom Packages =========
-    packages = forAllSystems (
-      system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ self.overlays.default ];
+      # ========= Custom Packages =========
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ self.overlays.default ];
+          };
+        in
+        lib.packagesFromDirectoryRecursive {
+          callPackage = lib.callPackageWith pkgs;
+          directory = ./pkgs/common;
+        }
+      );
+
+      # ========= Scripts =========
+      scripts = import ./scripts;
+
+      # ========= Formatter =========
+      # TODO:
+
+      # ========= DevShell =========
+      devShells = forAllSystems (
+        system:
+        import ./shell.nix {
+          pkgs = nixpkgs.legacyPackages.${system};
+        }
+      );
+
+      #
+      # ========= Host Configurations =========
+      #
+      nixosConfigurations = {
+        # desktop
+        peregrine = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [ ./hosts/peregrine ];
+          specialArgs = { inherit inputs outputs; };
         };
-      in
-      lib.packagesFromDirectoryRecursive {
-        callPackage = lib.callPackageWith pkgs;
-        directory = ./pkgs/common;
-      }
-    );
 
-    # ========= Scripts =========
-    scripts = import ./scripts;
+        # laptop
+        laptop = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [ ./hosts/laptop ];
+          specialArgs = { inherit inputs outputs; };
+        };
 
-    # ========= Formatter =========
-    # TODO:
-
-    # ========= DevShell =========
-    devShells = forAllSystems (
-      system:
-      import ./shell.nix {
-        pkgs = nixpkgs.legacyPackages.${system};
-      }
-    );
-
-    #
-    # ========= Host Configurations =========
-    #
-    nixosConfigurations = {
-      # desktop
-      peregrine = lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./hosts/peregrine ];
-        specialArgs = { inherit inputs outputs; };
-      };
-
-      # laptop
-      laptop = lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./hosts/laptop ];
-        specialArgs = { inherit inputs outputs; };
-      };
-
-      # Raspberry Pi
-      pi = lib.nixosSystem {
-        system = "aarch64-linux";
-        modules = [ ./hosts/pi ];
-        specialARgs = { inherit inputs outputs; };
+        # Raspberry Pi
+        pi = lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [ ./hosts/pi ];
+          specialARgs = { inherit inputs outputs; };
+        };
       };
     };
-  };
 }
