@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./binds.nix
     ./input.nix
@@ -12,5 +13,7 @@
     ./animations.nix
     ./gestures.nix
     ./debug.nix
+    ../waybar
+    ./waybar-extend.nix
   ];
 }
