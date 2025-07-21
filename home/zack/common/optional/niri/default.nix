@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    # niri configs
     ./binds.nix
     ./input.nix
     ./output.nix
@@ -13,7 +14,10 @@
     ./animations.nix
     ./gestures.nix
     ./debug.nix
+
+    # other stuff to setup
     ../waybar
     ./waybar-extend.nix
+    ./wpaperd.nix
   ];
 }
