@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
 
   # See https://github.com/sodiboo/niri-flake/blob/main/docs.md#programsnirisettingsbindsnameaction
   programs.niri.settings.binds = with config.lib.niri.actions; {
@@ -14,7 +15,7 @@
     };
 
     "Mod+R" = {
-      action = spawn "tofi"; # TODO: put in the real tofi launcher commands
+      action = spawn "sh" "-c" "niri msg action spawn -- $(tofi-drun)";
       hotkey-overlay.title = "Run an Application: tofi";
     };
 
@@ -85,32 +86,32 @@
     #
     # ========= Navigation =========
     #
-    "Mod+Left".action  = focus-column-left;
-    "Mod+Down".action  = focus-window-down;
-    "Mod+Up".action    = focus-window-up;
+    "Mod+Left".action = focus-column-left;
+    "Mod+Down".action = focus-window-down;
+    "Mod+Up".action = focus-window-up;
     "Mod+Right".action = focus-column-right;
-    "Mod+H".action     = focus-column-left;
-    "Mod+J".action     = focus-window-down;
-    "Mod+K".action     = focus-window-up;
-    "Mod+L".action     =  focus-column-right;
+    "Mod+H".action = focus-column-left;
+    "Mod+J".action = focus-window-down;
+    "Mod+K".action = focus-window-up;
+    "Mod+L".action = focus-column-right;
 
-    "Mod+Ctrl+Left".action  = move-column-left;
-    "Mod+Ctrl+Down".action  = move-window-down;
-    "Mod+Ctrl+Up".action    = move-window-up;
+    "Mod+Ctrl+Left".action = move-column-left;
+    "Mod+Ctrl+Down".action = move-window-down;
+    "Mod+Ctrl+Up".action = move-window-up;
     "Mod+Ctrl+Right".action = move-column-right;
-    "Mod+Ctrl+H".action     = move-column-left;
-    "Mod+Ctrl+J".action     = move-window-down;
-    "Mod+Ctrl+K".action     = move-window-up;
-    "Mod+Ctrl+L".action     = move-column-right;
+    "Mod+Ctrl+H".action = move-column-left;
+    "Mod+Ctrl+J".action = move-window-down;
+    "Mod+Ctrl+K".action = move-window-up;
+    "Mod+Ctrl+L".action = move-column-right;
 
-    "Mod+Shift+Ctrl+Left".action  = move-column-to-monitor-left;
-    "Mod+Shift+Ctrl+Down".action  = move-window-to-monitor-down;
-    "Mod+Shift+Ctrl+Up".action    = move-window-to-monitor-up;
+    "Mod+Shift+Ctrl+Left".action = move-column-to-monitor-left;
+    "Mod+Shift+Ctrl+Down".action = move-window-to-monitor-down;
+    "Mod+Shift+Ctrl+Up".action = move-window-to-monitor-up;
     "Mod+Shift+Ctrl+Right".action = move-column-to-monitor-right;
-    "Mod+Shift+Ctrl+H".action     = move-column-to-monitor-left;
-    "Mod+Shift+Ctrl+J".action     = move-window-to-monitor-down;
-    "Mod+Shift+Ctrl+K".action     = move-window-to-monitor-up;
-    "Mod+Shift+Ctrl+L".action     = move-column-to-monitor-right;
+    "Mod+Shift+Ctrl+H".action = move-column-to-monitor-left;
+    "Mod+Shift+Ctrl+J".action = move-window-to-monitor-down;
+    "Mod+Shift+Ctrl+K".action = move-window-to-monitor-up;
+    "Mod+Shift+Ctrl+L".action = move-column-to-monitor-right;
 
     "Mod+U".action = move-workspace-down;
     "Mod+I".action = move-workspace-up;
@@ -118,7 +119,7 @@
     # Move the focused window in and out of a column
     # If the window is alone, consume it into the nearby column to the side
     # If the window is already in a column, expel it
-    "Mod+BracketLeft".action  = consume-or-expel-window-left;
+    "Mod+BracketLeft".action = consume-or-expel-window-left;
     "Mod+BracketRight".action = consume-or-expel-window-right;
 
     # Consume one window from the right to the bottom of focused column
@@ -126,10 +127,10 @@
     # Expel the bottom window from the focused column to the right
     "Mod+Period".action = expel-window-from-column;
 
-    "Mod+D".action       = switch-preset-column-width;
+    "Mod+D".action = switch-preset-column-width;
     "Mod+Shift+D".action = switch-preset-window-height;
-    "Mod+Ctrl+D".action  = reset-window-height;
-    "Mod+F".action       = maximize-column;
+    "Mod+Ctrl+D".action = reset-window-height;
+    "Mod+F".action = maximize-column;
     "Mod+Shift+F".action = fullscreen-window;
 
     # Expand the focused column to space not taken up by other fully visible columns
