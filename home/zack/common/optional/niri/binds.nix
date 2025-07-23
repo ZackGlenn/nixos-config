@@ -87,22 +87,22 @@
     # ========= Navigation =========
     #
     "Mod+Left".action = focus-column-left;
-    "Mod+Down".action = focus-window-down;
-    "Mod+Up".action = focus-window-up;
+    "Mod+Down".action = focus-window-or-workspace-down;
+    "Mod+Up".action = focus-window-or-workspace-up;
     "Mod+Right".action = focus-column-right;
     "Mod+H".action = focus-column-left;
-    "Mod+J".action = focus-window-down;
-    "Mod+K".action = focus-window-up;
+    "Mod+J".action = focus-window-or-workspace-down;
+    "Mod+K".action = focus-window-or-workspace-up;
     "Mod+L".action = focus-column-right;
 
-    "Mod+Ctrl+Left".action = move-column-left;
-    "Mod+Ctrl+Down".action = move-window-down;
-    "Mod+Ctrl+Up".action = move-window-up;
-    "Mod+Ctrl+Right".action = move-column-right;
-    "Mod+Ctrl+H".action = move-column-left;
-    "Mod+Ctrl+J".action = move-window-down;
-    "Mod+Ctrl+K".action = move-window-up;
-    "Mod+Ctrl+L".action = move-column-right;
+    "Mod+Shift+Left".action = move-column-left;
+    "Mod+Shift+Down".action = move-window-down-or-to-workspace-down;
+    "Mod+Shift+Up".action = move-window-up-or-to-workspace-up;
+    "Mod+Shift+Right".action = move-column-right;
+    "Mod+Shift+H".action = move-column-left;
+    "Mod+Shift+J".action = move-window-down-or-to-workspace-down;
+    "Mod+Shift+K".action = move-window-up-or-to-workspace-up;
+    "Mod+Shift+L".action = move-column-right;
 
     "Mod+Shift+Ctrl+Left".action = move-column-to-monitor-left;
     "Mod+Shift+Ctrl+Down".action = move-window-to-monitor-down;
@@ -119,8 +119,10 @@
     # Move the focused window in and out of a column
     # If the window is alone, consume it into the nearby column to the side
     # If the window is already in a column, expel it
-    "Mod+BracketLeft".action = consume-or-expel-window-left;
-    "Mod+BracketRight".action = consume-or-expel-window-right;
+    "Mod+Ctrl+Left".action = consume-or-expel-window-left;
+    "Mod+Ctrl+Right".action = consume-or-expel-window-right;
+    "Mod+Ctrl+H".action = consume-or-expel-window-left;
+    "Mod+Ctrl+L".action = consume-or-expel-window-right;
 
     # Consume one window from the right to the bottom of focused column
     "Mod+Comma".action = consume-window-into-column;
