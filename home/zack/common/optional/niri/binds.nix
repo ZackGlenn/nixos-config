@@ -35,6 +35,7 @@
     };
 
     "Mod+C".action = spawn "bluetoggle" "B8:7B:D4:15:C5:5D";
+    "Mod+D".action = spawn "dunstctl" "close-all";
 
     #
     # ========= Volume keys =========
@@ -131,7 +132,7 @@
     # Expel the bottom window from the focused column to the right
     "Mod+Period".action = expel-window-from-column;
 
-    "Mod+D".action = switch-preset-column-width;
+    "Mod+S".action = switch-preset-column-width;
     "Mod+Shift+D".action = switch-preset-window-height;
     "Mod+Ctrl+D".action = reset-window-height;
     "Mod+F".action = maximize-column;
