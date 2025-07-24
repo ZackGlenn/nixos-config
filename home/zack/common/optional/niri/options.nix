@@ -19,7 +19,7 @@
 
     hotkey-overlay = {
       # Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-      # skip-at-startup
+      skip-at-startup = true;
     };
 
     # Uncomment this line to ask the clients to omit their client-side decorations if possible.
