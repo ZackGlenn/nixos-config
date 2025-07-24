@@ -36,5 +36,6 @@
     ./common/optional/stress.nix
     ./common/optional/unigine.nix
     ./common/optional/discord.nix
+    ./common/optional/bluetoggle.nix
   ];
 }

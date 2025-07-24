@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
   imports = [
     # ========= Required Configs =========
@@ -27,5 +27,6 @@
     ./common/optional/youtube.nix
     ./common/optional/udiskie.nix
     ./common/optional/audacity.nix
+    ./common/optional/bluetoggle.nix
   ];
 }

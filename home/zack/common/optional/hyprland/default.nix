@@ -19,7 +19,6 @@
     hyprcursor
     powermenu
     hyprpass
-    bluetoggle
   ];
 
   wayland.windowManager.hyprland = {
