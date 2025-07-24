@@ -1,13 +1,21 @@
-{ ... }:
+{
+  lib,
+  pkgs,
+  ...
+}:
 {
   programs.niri.settings = {
     spawn-at-startup = [
-      # { command = ["xwayland-sattelite"]; }
       { command = [ "lxqt-policykit-agent" ]; }
       # { command = ["waybar"]; }
       { command = [ "kitty" ]; }
       # { command = ["qutebrowser" "--nowindow"]; } # autostart qb to improve time opening first window
     ];
+
+    xwayland-satellite = {
+      enable = true;
+      path = lib.getExe pkgs.xwayland-satellite-unstable;
+    };
 
     hotkey-overlay = {
       # Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
