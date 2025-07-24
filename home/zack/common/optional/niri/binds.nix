@@ -34,6 +34,8 @@
       hotkey-overlay.title = "Launch a File Manager: yazi";
     };
 
+    "Mod+C".action = spawn "bluetoggle" "B8:7B:D4:15:C5:5D";
+
     #
     # ========= Volume keys =========
     #
@@ -139,9 +141,9 @@
     # Makes the column "fill the rest of the space"
     "Mod+Ctrl+F".action = expand-column-to-available-width;
 
-    "Mod+C".action = center-column;
+    "Mod+M".action = center-column;
     # Center all fully visible columns on screen
-    "Mod+Ctrl+C".action = center-visible-columns;
+    "Mod+Ctrl+M".action = center-visible-columns;
 
     # Finer width adjustments
     "Mod+Minus".action = set-column-width "-10%";
