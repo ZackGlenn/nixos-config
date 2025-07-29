@@ -18,6 +18,7 @@
     # other stuff to setup
     ../waybar
     ./waybar-extend.nix
+    ../tofipass.nix
     ./wpaperd.nix
   ];
 }

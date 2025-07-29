@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     bind = [
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
@@ -12,7 +13,7 @@
       "$mainMod, X, exec, powermenu"
       "$mainMod, C, exec, bluetoggle B8:7B:D4:15:C5:5D"
       "$mainMod SHIFT, R, exec, $menu_full"
-      "$mainMod, A, exec, hyprpass -d ~/Sync/Passwords/Passwords.kdbx"
+      "$mainMod, A, exec, tofipass -d ~/Sync/Passwords/Passwords.kdbx"
       "$mainMod SHIFT, A, exec, hyprpass -p -d ~/Sync/Passwords/Passwords.kdbx"
       "$mainMod, D, exec, dunstctl close-all"
       "$mainMod, P, pseudo," # dwindle
@@ -73,7 +74,6 @@
       "$mainMod SHIFT, 9, movetoworkspacesilent, 9"
       "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
 
-
       # Switch workspaces with mainMod + yuiop
       "$mainMod, y, focusworkspaceoncurrentmonitor, 1"
       "$mainMod, u, focusworkspaceoncurrentmonitor, 2"
@@ -120,5 +120,5 @@
       ",XF86AudioPlay, exec, playerctl play-pause"
       ",XF86AudioPrev, exec, playerctl previous"
     ];
-};
+  };
 }

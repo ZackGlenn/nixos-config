@@ -3,6 +3,7 @@
   imports = [
     ../waybar
     ./waybar_extend.nix
+    ../tofipass.nix
     ./hyprlock.nix
     ./gtk.nix
     ./qt.nix
@@ -18,7 +19,6 @@
   home.packages = with pkgs; [
     hyprcursor
     powermenu
-    hyprpass
   ];
 
   wayland.windowManager.hyprland = {

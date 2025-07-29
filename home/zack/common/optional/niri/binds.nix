@@ -36,6 +36,7 @@
 
     "Mod+C".action = spawn "bluetoggle" "B8:7B:D4:15:C5:5D";
     "Mod+D".action = spawn "dunstctl" "close-all";
+    "Mod+A".action = spawn "tofipass" "-d" "/home/zack/Sync/Passwords/Passwords.kdbx";
 
     #
     # ========= Media keys =========
