@@ -38,7 +38,7 @@
     "Mod+D".action = spawn "dunstctl" "close-all";
 
     #
-    # ========= Volume keys =========
+    # ========= Media keys =========
     #
     # using allow-when-locked makes these work even with the session locked
     "XF86AudioRaiseVolume" = {
@@ -59,6 +59,22 @@
     "XF86AudioMicMute" = {
       action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
       allow-when-locked = true;
+    };
+
+    "XF86AudioNext" = {
+      action = spawn "exec" "playerctl" "next";
+    };
+
+    "XF86AudioPause" = {
+      action = spawn "exec" "playerctl" "play-pause";
+    };
+
+    "XF86AudioPlay" = {
+      action = spawn "exec" "playerctl" "play-pause";
+    };
+
+    "XF86AudioPrev" = {
+      action = spawn "exec" "playerctl" "previous";
     };
 
     #
