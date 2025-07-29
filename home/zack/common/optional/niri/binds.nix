@@ -149,8 +149,8 @@
     "Mod+Period".action = expel-window-from-column;
 
     "Mod+S".action = switch-preset-column-width;
-    "Mod+Shift+D".action = switch-preset-window-height;
-    "Mod+Ctrl+D".action = reset-window-height;
+    "Mod+Shift+S".action = switch-preset-window-height;
+    "Mod+Ctrl+S".action = reset-window-height;
     "Mod+F".action = maximize-column;
     "Mod+Shift+F".action = fullscreen-window;
 
