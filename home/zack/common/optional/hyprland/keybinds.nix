@@ -14,7 +14,7 @@
       "$mainMod, C, exec, bluetoggle B8:7B:D4:15:C5:5D"
       "$mainMod SHIFT, R, exec, $menu_full"
       "$mainMod, A, exec, tofipass -d ~/Sync/Passwords/Passwords.kdbx"
-      "$mainMod SHIFT, A, exec, hyprpass -p -d ~/Sync/Passwords/Passwords.kdbx"
+      "$mainMod SHIFT, A, exec, tofipass -p -d ~/Sync/Passwords/Passwords.kdbx"
       "$mainMod, D, exec, dunstctl close-all"
       "$mainMod, P, pseudo," # dwindle
       "$mainMod, T, togglesplit," # dwindle
