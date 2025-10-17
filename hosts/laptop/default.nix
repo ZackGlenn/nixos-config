@@ -1,7 +1,8 @@
 #
 # ========= Laptop - Main Machine =========
 #
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = [
     # ========= Hardware Modules =========
     inputs.hardware.nixosModules.common-pc-laptop
@@ -17,6 +18,7 @@
     ../common/optional/services/pipewire.nix
     ../common/optional/services/udisks2.nix
     ../common/optional/services/mySync.nix
+    ../common/optional/services/printing.nix
     ../common/optional/hyprland.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
@@ -38,7 +40,11 @@
   mySync = {
     hostName = "laptop";
     user = "zack";
-    sync_to = [ "phone" "peregrine" "pi" ];
+    sync_to = [
+      "phone"
+      "peregrine"
+      "pi"
+    ];
   };
 
   networking = {
@@ -53,10 +59,12 @@
   # allow emulated cross-compilation
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
-  swapDevices = [{
-    device = "/swapfile";
-    size = 16 * 1024; # 16GB
-  }];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 16 * 1024; # 16GB
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
