@@ -1,7 +1,12 @@
 #
 # ========= Laptop - Main Machine =========
 #
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 {
   imports = [
     # ========= Hardware Modules =========
@@ -19,6 +24,7 @@
     ../common/optional/services/udisks2.nix
     ../common/optional/services/openrgb.nix
     ../common/optional/services/mySync.nix
+    ../common/optional/services/printing.nix
     # ../common/optional/hyprlock.nix
     # ../common/optional/hyprland.nix
     ../common/optional/niri.nix
@@ -30,6 +36,7 @@
     ../common/optional/networkmanager.nix
     ../common/optional/ssh.nix
     ../common/optional/steam.nix
+    ../common/optional/ddcci-backlight.nix
 
     # ========= Users to Create =========
     ../common/users/zack

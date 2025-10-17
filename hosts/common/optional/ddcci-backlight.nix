@@ -1,7 +1,10 @@
 { pkgs, config, ... }:
 {
   boot.extraModulePackages = with config.boot.kernelPackages; [ ddcci-driver ];
-  boot.kernelModules = [ "ddcci-backlight" ];
+  boot.kernelModules = [
+    "i2c-dev"
+    "ddcci-backlight"
+  ];
   services.udev.extraRules =
     let
       bash = "${pkgs.bash}/bin/bash";
