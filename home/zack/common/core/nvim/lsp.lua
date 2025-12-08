@@ -153,7 +153,7 @@ local servers = {
 }
 
 for name, settings in pairs(servers) do
-  require("lspconfig")[name].setup(settings)
+  vim.lsp.config[name] = settings
 end
 
 -- lazydev
