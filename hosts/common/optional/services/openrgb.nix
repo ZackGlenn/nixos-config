@@ -10,4 +10,8 @@
   wantedBy = [ "multi-user.target" ];
   after = ["openrgb.service"];
   };
+
+  powerManagement.resumeCommands = ''
+      ${pkgs.openrgb}/bin/openrgb --mode static --brightness 30 --color 7aa2f7
+    '';
 }
