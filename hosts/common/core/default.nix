@@ -8,6 +8,7 @@
     ./neovim.nix
     ./nvd.nix
     ./firmware.nix
+    ./nix-ld.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = {
