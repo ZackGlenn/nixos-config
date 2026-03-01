@@ -37,5 +37,6 @@
     # ./common/optional/unigine.nix
     ./common/optional/discord.nix
     ./common/optional/bluetoggle.nix
+    ./common/optional/kenku-fm.nix
   ];
 }
