@@ -68,11 +68,11 @@
     };
 
     "XF86AudioPause" = {
-      action = spawn "exec" "playerctl" "play-pause";
+      action = spawn "playerctl" "play-pause";
     };
 
     "XF86AudioPlay" = {
-      action = spawn "exec" "playerctl" "play-pause";
+      action = spawn "playerctl" "play-pause";
     };
 
     "XF86AudioPrev" = {
