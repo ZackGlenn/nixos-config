@@ -154,6 +154,7 @@ local servers = {
 
 for name, settings in pairs(servers) do
   vim.lsp.config[name] = settings
+  vim.lsp.enable(name)
 end
 
 -- lazydev
