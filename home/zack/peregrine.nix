@@ -38,5 +38,6 @@
     ./common/optional/discord.nix
     ./common/optional/bluetoggle.nix
     ./common/optional/kenku-fm.nix
+    ./common/optional/scarlett.nix
   ];
 }
