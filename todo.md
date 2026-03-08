@@ -5,4 +5,3 @@
 - fix sddm theme
 - fix openrgb not detecting leds correctly
 - fix lazydev setup
-- fix nixos deprecations/warnings
