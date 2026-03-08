@@ -1,14 +1,14 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
-programs.neovim = {
+  programs.neovim = {
     enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
 
-    extraLuaConfig = "
+    initLua = "
       ${builtins.readFile ./options.lua}
       ${builtins.readFile ./keymaps.lua}
       ${builtins.readFile ./gitsigns.lua}
@@ -84,5 +84,5 @@ programs.neovim = {
       nodePackages.bash-language-server
       tinymist
     ];
-};
+  };
 }
