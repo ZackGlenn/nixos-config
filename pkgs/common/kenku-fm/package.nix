@@ -1,4 +1,12 @@
-{pkgs, lib, stdenv, unzip, makeDesktopItem, copyDesktopItems, ...}:
+{
+  pkgs,
+  lib,
+  stdenv,
+  unzip,
+  makeDesktopItem,
+  copyDesktopItems,
+  ...
+}:
 
 let
   desktopItem = makeDesktopItem {
@@ -7,15 +15,16 @@ let
     desktopName = "Kenku FM";
     genericName = "Audio sharing for Discord";
   };
-in stdenv.mkDerivation rec {
+in
+stdenv.mkDerivation rec {
   name = "kenku-fm";
-  version = "1.5.4";
+  version = "1.5.5";
 
   src = pkgs.fetchurl {
     url = "https://github.com/owlbear-rodeo/kenku-fm/releases/download/v${version}/Kenku.FM-linux-x64-${version}.zip";
-    sha256 = "sha256-OGEC/UcEH86kH4uHqIfQAoZF/aj+o9rVUZDhOSOiWRc=";
+    sha256 = "sha256-0iGks0QLdCwOejQjN/tb0iZvmngd/jIP0/T9yhi4K0k=";
   };
-  
+
   nativeBuildInputs = [
     unzip
     copyDesktopItems
@@ -36,7 +45,7 @@ in stdenv.mkDerivation rec {
   meta = {
     description = "Online tabletop audio sharing for Discord";
     homepage = "https://www.kenku.fm/";
-    license  = lib.licenses.gpl3Only;
+    license = lib.licenses.gpl3Only;
     platforms = [ "x86_64-linux" ];
   };
 }
