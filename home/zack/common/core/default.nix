@@ -1,4 +1,10 @@
-{ pkgs, lib, outputs, ... }: {
+{
+  pkgs,
+  lib,
+  outputs,
+  ...
+}:
+{
 
   imports = [
     ./bash.nix
@@ -8,7 +14,8 @@
     ./btop.nix
     ./yazi.nix
     ./nvim
-  ] ++ (builtins.attrValues outputs.homeManagerModules);
+  ]
+  ++ (builtins.attrValues outputs.homeManagerModules);
 
   home = {
     username = lib.mkDefault "zack";
@@ -29,7 +36,7 @@
     clipse
     dust
     tldr
-    neofetch
+    fastfetch
     usbutils
     zip
     unzip
