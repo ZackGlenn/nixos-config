@@ -5,3 +5,4 @@
 - fix sddm theme
 - fix openrgb not detecting leds correctly
 - fix lazydev setup
+- try out noctalia
