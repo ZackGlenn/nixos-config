@@ -8,8 +8,6 @@
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    inputs.niri-flake.nixosModules.niri
-    inputs.noctalia.nixosModules.default
     ./locale.nix
     ./nix.nix
     ./sops.nix

@@ -1,5 +1,7 @@
 { pkgs, inputs, ... }:
 {
+  imports = [ inputs.niri-flake.nixosModules.niri ];
+
   nixpkgs.overlays = [ inputs.niri-flake.overlays.niri ];
   environment.systemPackages = with pkgs; [
     wl-clipboard
