@@ -1,7 +1,13 @@
-{pkgs, inputs, outputs, config, ...}: {
+{
+  pkgs,
+  inputs,
+  outputs,
+  config,
+  ...
+}:
+{
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    inputs.niri-flake.nixosModules.niri
     ./locale.nix
     ./nix.nix
     ./sops.nix
@@ -9,7 +15,8 @@
     ./nvd.nix
     ./firmware.nix
     ./nix-ld.nix
-  ] ++ (builtins.attrValues outputs.nixosModules);
+  ]
+  ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;
