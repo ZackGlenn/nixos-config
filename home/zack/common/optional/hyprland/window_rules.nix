@@ -1,0 +1,20 @@
+{...}: {
+  wayland.windowManager.hyprland.settings = {
+    # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+    # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
+
+    # Example windowrule v1
+    # windowrule = "float, ^(kitty)$";
+
+    # Example windowrule v2
+    # windowrulev2 = "float, class:^(kitty)$,title:^(kitty)$";
+
+    windowrulev2 = [
+      # Ignore maximize requests from apps. You'll probably like this.
+      "suppressevent maximize, class:.*"
+
+      # Fix some dragging issues with XWayland
+      "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+    ];
+  };
+}

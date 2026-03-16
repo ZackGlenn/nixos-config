@@ -1,0 +1,43 @@
+{ pkgs, ... }:
+{
+  imports = [
+    # ========= Required Configs =========
+    ./common/core
+
+    # ========= Host-specific Optional Configs =========
+    # ./common/optional/hyprland
+    # ./common/optional/hyprland/peregrine.nix
+    ./common/optional/niri
+    ./common/optional/dunst.nix
+    ./common/optional/blueman.nix
+    ./common/optional/brightnessctl.nix
+    ./common/optional/cli-fun.nix
+    ./common/optional/keepassxc.nix
+    ./common/optional/kitty.nix
+    ./common/optional/lazygit.nix
+    ./common/optional/media.nix
+    ./common/optional/obsidian.nix
+    ./common/optional/qutebrowser.nix
+    ./common/optional/rink.nix
+    ./common/optional/tofi.nix
+    ./common/optional/typst.nix
+    ./common/optional/wayland.nix
+    ./common/optional/webcord.nix
+    ./common/optional/zathura.nix
+    ./common/optional/sops.nix
+    ./common/optional/youtube.nix
+    ./common/optional/chromium.nix
+    ./common/optional/ssh.nix
+    ./common/optional/mangohud.nix
+    ./common/optional/lumafly.nix
+    ./common/optional/udiskie.nix
+    ./common/optional/audacity.nix
+    ./common/optional/geekbench.nix
+    ./common/optional/stress.nix
+    # ./common/optional/unigine.nix
+    ./common/optional/discord.nix
+    ./common/optional/bluetoggle.nix
+    ./common/optional/kenku-fm.nix
+    ./common/optional/scarlett.nix
+  ];
+}

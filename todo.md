@@ -1,10 +1,8 @@
 # TODO
 
 - fix visual mode comment mapping
-- hypridle
-- icon themes
 - dunst themeing and keybinds
-- build bluetoggle into the config
-- modularization
-- how to have different monitor and resolution setup for different machines with hyprland
-- overhaul how nvim keybindings are organized
+- fix sddm theme
+- fix openrgb not detecting leds correctly
+- fix lazydev setup
+- try out noctalia
