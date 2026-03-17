@@ -6,7 +6,7 @@
     ];
     binds = with config.lib.niri.actions; {
       "Mod+D" = lib.mkForce {
-        action = spawn "noctalia-shell" "ipc" "call" "notifications" "clear";
+        action = spawn "noctalia-shell" "ipc" "call" "notifications" "dismissAll";
       };
 
       "Mod+R" = lib.mkForce {
