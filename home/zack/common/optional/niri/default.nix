@@ -16,8 +16,10 @@
     ./debug.nix
 
     # other stuff to setup
-    ../waybar
-    ./waybar-extend.nix
+    # ../waybar
+    # ./waybar-extend.nix
+    ../noctalia
+    ./noctalia-extend.nix
     ../tofipass.nix
     ./wpaperd.nix
   ];
