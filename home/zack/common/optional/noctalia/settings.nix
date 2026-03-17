@@ -40,9 +40,6 @@
             id = "SystemMonitor";
           }
           {
-            id = "ActiveWindow";
-          }
-          {
             id = "MediaMini";
           }
         ];
@@ -147,7 +144,7 @@
       reverseScroll = false;
     };
     ui = {
-      fontDefault = "";
+      fontDefault = "JetBrainsMono";
       fontFixed = "";
       fontDefaultScale = 1;
       fontFixedScale = 1;
@@ -191,7 +188,7 @@
       ];
     };
     wallpaper = {
-      enabled = true;
+      enabled = false;
       overviewEnabled = false;
       directory = "";
       monitorDirectories = [ ];
