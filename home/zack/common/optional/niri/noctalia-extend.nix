@@ -19,6 +19,9 @@
         hotkey-overlay.title = "Lock the Screen: noctalia";
       };
     };
-  };
 
+    environment = {
+      QT_QPA_PLATFORMTHEME = "gtk3";
+    };
+  };
 }

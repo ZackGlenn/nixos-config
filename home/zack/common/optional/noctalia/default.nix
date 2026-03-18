@@ -3,6 +3,8 @@
   imports = [
     inputs.noctalia.homeModules.default
     ./settings.nix
+    ./qt.nix
+    ./gtk.nix
   ];
 
   programs.noctalia-shell = {
