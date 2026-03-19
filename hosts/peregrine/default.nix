@@ -30,7 +30,8 @@
     ../common/optional/niri.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
-    ../common/optional/sddm.nix
+    # ../common/optional/sddm.nix
+    ../common/optional/tuigreet.nix
     ../common/optional/fonts.nix
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix
