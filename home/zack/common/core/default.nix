@@ -14,6 +14,7 @@
     ./btop.nix
     ./yazi.nix
     ./nvim
+    ./nix-index.nix
   ]
   ++ (builtins.attrValues outputs.homeManagerModules);
 
