@@ -1,6 +1,11 @@
 { config, lib, ... }:
 {
   programs.niri.settings = {
+
+    debug = {
+      honor-xdg-activation-with-invalid-serial = { };
+    };
+
     spawn-at-startup = [
       { command = [ "noctalia-shell" ]; }
     ];
@@ -17,6 +22,11 @@
       "Super+Alt+L" = lib.mkForce {
         action = spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock";
         hotkey-overlay.title = "Lock the Screen: noctalia";
+      };
+
+      "Super+X" = lib.mkForce {
+        action = spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle";
+        hotkey-overlay.title = "Toggle the session menu";
       };
     };
 
