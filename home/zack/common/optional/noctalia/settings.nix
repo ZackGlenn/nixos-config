@@ -158,10 +158,10 @@
       settingsPanelSideBarCardStyle = false;
     };
     location = {
-      name = "Tokyo";
+      name = "Utah";
       weatherEnabled = true;
       weatherShowEffects = true;
-      useFahrenheit = false;
+      useFahrenheit = true;
       use12hourFormat = false;
       showWeekNumberInCalendar = false;
       showCalendarEvents = true;
