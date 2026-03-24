@@ -5,10 +5,4 @@
     platformTheme.name = "gtk";
     style.name = "gtk3";
   };
-
-  qt6ctSettings = {
-    Appearance = {
-
-    };
-  };
 }

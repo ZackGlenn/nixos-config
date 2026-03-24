@@ -1,9 +1,7 @@
 # TODO
 
 - fix visual mode comment mapping
-- dunst themeing and keybinds
-- fix sddm theme
-- fix openrgb not detecting leds correctly
 - fix lazydev setup
-- try out noctalia
 - set up duplicity
+- rearchitecture how window managers and DE elements interact with each other (e.g. us lib.mkIf)
+- add hyfetch
