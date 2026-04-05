@@ -1,0 +1,23 @@
+{ ... }:
+{
+  programs.hyfetch = {
+    enable = true;
+    settings = {
+      preset = "bisexual";
+      mode = "rgb";
+      auto_detect_light_dark = true;
+      light_dark = "dark";
+      lightness = 0.65;
+      color_align = {
+        mode = "horizontal";
+      };
+      backend = "fastfetch";
+      args = null;
+      distro = "nixos_small";
+      pride_month_disable = false;
+      custom_ascii_path = null;
+    };
+  };
+
+  programs.fish.shellAliases.hy = "hyfetch";
+}

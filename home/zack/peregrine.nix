@@ -39,5 +39,6 @@
     ./common/optional/bluetoggle.nix
     ./common/optional/kenku-fm.nix
     ./common/optional/scarlett.nix
+    ./common/optional/hyfetch.nix
   ];
 }

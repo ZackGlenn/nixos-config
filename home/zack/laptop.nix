@@ -28,5 +28,6 @@
     ./common/optional/udiskie.nix
     ./common/optional/audacity.nix
     ./common/optional/bluetoggle.nix
+    ./common/optional/hyfetch.nix
   ];
 }
