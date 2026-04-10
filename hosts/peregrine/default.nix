@@ -38,7 +38,6 @@
     ../common/optional/ssh.nix
     ../common/optional/steam.nix
     ../common/optional/ddcci-backlight.nix
-    ../common/optional/gamemode.nix
 
     # ========= Users to Create =========
     ../common/users/zack
