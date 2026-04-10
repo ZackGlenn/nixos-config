@@ -7,6 +7,8 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
+    withRuby = true;
+    withPython3 = true;
 
     initLua = "
       ${builtins.readFile ./options.lua}
@@ -81,7 +83,7 @@
       stylua
       rust-analyzer
       pyright
-      nodePackages.bash-language-server
+      bash-language-server
       tinymist
     ];
   };

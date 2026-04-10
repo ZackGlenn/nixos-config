@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   gtk = {
     enable = true;
@@ -14,5 +14,6 @@
       name = "JetBrainsMono";
       size = 11;
     };
+    gtk4.theme = config.gtk.theme;
   };
 }
