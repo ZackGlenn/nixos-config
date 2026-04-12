@@ -158,7 +158,8 @@
       settingsPanelSideBarCardStyle = false;
     };
     location = {
-      name = "Utah";
+      name = "";
+      autolocate = true;
       weatherEnabled = true;
       weatherShowEffects = true;
       useFahrenheit = true;
