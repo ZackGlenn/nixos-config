@@ -19,11 +19,13 @@
     ../common/optional/services/udisks2.nix
     ../common/optional/services/mySync.nix
     ../common/optional/services/printing.nix
-    ../common/optional/hyprland.nix
+    # ../common/optional/hyprland.nix
+    # ../common/optional/hyprlock.nix
+    ../common/optional/niri.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
-    ../common/optional/hyprlock.nix
-    ../common/optional/sddm.nix
+    # ../common/optional/sddm.nix
+    ../common/optional/tuigreet.nix
     ../common/optional/fonts.nix
     ../common/optional/git.nix
     ../common/optional/networkmanager.nix

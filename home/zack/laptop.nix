@@ -5,8 +5,9 @@
     ./common/core
 
     # ========= Host-specific Optional Configs =========
-    ./common/optional/hyprland
-    ./common/optional/hyprland/laptop.nix
+    # ./common/optional/hyprland
+    # ./common/optional/hyprland/laptop.nix
+    ./common/optional/niri
     ./common/optional/dunst.nix
     ./common/optional/blueman.nix
     ./common/optional/brightnessctl.nix
@@ -25,9 +26,13 @@
     ./common/optional/zathura.nix
     ./common/optional/sops.nix
     ./common/optional/youtube.nix
+    ./common/optional/chromium.nix
+    ./common/optional/ssh.nix
     ./common/optional/udiskie.nix
     ./common/optional/audacity.nix
+    ./common/optional/discord.nix
     ./common/optional/bluetoggle.nix
+    ./common/optional/kenku-fm.nix
     ./common/optional/hyfetch.nix
   ];
 }
