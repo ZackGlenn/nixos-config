@@ -8,6 +8,7 @@
     # ./common/optional/hyprland
     # ./common/optional/hyprland/laptop.nix
     ./common/optional/niri
+    ./common/optional/niri/laptop.nix
     ./common/optional/dunst.nix
     ./common/optional/blueman.nix
     ./common/optional/brightnessctl.nix

@@ -4,7 +4,6 @@
     # niri configs
     ./binds.nix
     ./input.nix
-    ./output.nix
     ./environment.nix
     ./switch-events.nix
     ./layout.nix
