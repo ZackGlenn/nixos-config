@@ -83,12 +83,12 @@
     # ========= Brightness keys =========
     #
     "XF86MonBrightnessUp" = {
-      action = spawn "brighnessctl" "--class=backlight" "set" "+10%";
+      action = spawn "brightnessctl" "--class=backlight" "set" "+10%";
       allow-when-locked = true;
     };
 
     "XF86MonBrightnessDown" = {
-      action = spawn "brighnessctl" "--class=backlight" "set" "-10%";
+      action = spawn "brightnessctl" "--class=backlight" "set" "10%-";
       allow-when-locked = true;
     };
 
