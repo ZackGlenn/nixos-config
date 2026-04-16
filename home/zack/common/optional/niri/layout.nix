@@ -15,6 +15,9 @@
     #   together with the previously focused column.
     center-focused-column = "never";
 
+    # Always put an empty workspace above the first, similar to the default empty workspace below the last
+    empty-workspace-above-first = true;
+
     # You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths = [
       # Proportion sets the width as a fraction of the output width, taking gaps into account.
