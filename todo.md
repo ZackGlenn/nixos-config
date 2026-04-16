@@ -4,4 +4,4 @@
 - fix lazydev setup
 - set up duplicity
 - rearchitecture how window managers and DE elements interact with each other (e.g. us lib.mkIf)
-- add hyfetch
+- fix how noctalia numbers niri workspaces
