@@ -5,3 +5,5 @@
 - set up duplicity
 - rearchitecture how window managers and DE elements interact with each other (e.g. us lib.mkIf)
 - fix how noctalia numbers niri workspaces
+- switch to PQS age keys for use with sops
+    - rotate secrets
