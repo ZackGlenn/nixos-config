@@ -25,6 +25,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "hm-backup";
+  home-manager.sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
 
   nixpkgs = {
     overlays = [ outputs.overlays.default ];

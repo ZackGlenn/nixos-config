@@ -1,7 +1,8 @@
-{ inputs, hostName, ... }: {
-  imports = [
-    inputs.sops-nix.homeManagerModules.sops
-  ];
+{ inputs, hostName, ... }:
+{
+  # imports = [
+  #   inputs.sops-nix.homeManagerModules.sops
+  # ];
 
   sops = {
     # This is the zack/dev key and needs to have been copied to this location on this host
