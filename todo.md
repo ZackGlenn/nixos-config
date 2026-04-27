@@ -8,7 +8,8 @@
 - switch to PQS age keys for use with sops
     - [x] get the config updated
     - [x] get everything set up on peregrine
-    - [ ] get everything set up on laptop
+    - [x] get everything set up on laptop
     - [ ] rotate secrets
     - [ ] evaluate whether to delete git history
 - allow proprietary firmware
+- install on pi
