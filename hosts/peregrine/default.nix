@@ -18,6 +18,7 @@
     # ========= Required Configs =========
     ../common/core
     ./hardware-configuration.nix
+    ./lact.nix
 
     # ========= Host-specific Optional Configs =========
     ../common/optional/services/pipewire.nix
