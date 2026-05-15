@@ -43,6 +43,7 @@
       # accel-speed 0.2 = true;
       # accel-profile "flat" true;
       # scroll-method "no-scroll" = true;
+      scroll-factor = 1.0;
     };
 
     trackpoint = {
