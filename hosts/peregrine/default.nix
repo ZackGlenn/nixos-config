@@ -50,7 +50,7 @@
     sync_to = [
       "phone"
       "laptop"
-      "pi"
+      "swallow"
     ];
   };
 

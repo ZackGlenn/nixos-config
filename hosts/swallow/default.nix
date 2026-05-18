@@ -1,14 +1,12 @@
 #
 # ========= Pi - Tiny Home Server =========
 #
-{ inputs, pkgs, ... }: {
-  imports = [
+{ inputs, pkgs, ... }:
+{
+  imports = with inputs.nixos-raspberrypi.nixosModules; [
     # ========= Hardware Modules =========
-    inputs.hardware.nixosModules.raspberry-pi-4
-
-    # ======== Disk Layout =========
-    inputs.disko.nixosModules.disko
-    ./disks.nix
+    raspberry-pi-4.base
+    usb-gadget-ethernet
 
     # ========= Required Configs =========
     ../common/core
@@ -30,19 +28,25 @@
   ];
 
   mySync = {
-    hostName = "pi";
+    hostName = "swallow";
     user = "zack";
-    sync_to = [ "phone" "laptop" "peregrine" ];
+    sync_to = [
+      "phone"
+      "laptop"
+      "peregrine"
+    ];
   };
 
   networking = {
-    hostName = "pi";
+    hostName = "swallow";
   };
 
-  swapDevices = [{
-    device = "/swapfile";
-    size = 8 * 1024; # 8GB
-  }];
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 1 * 1024; # 1GB
+    }
+  ];
 
   environment.systemPackages = [ pkgs.libraspberrypi ];
 
@@ -54,4 +58,3 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 }
-

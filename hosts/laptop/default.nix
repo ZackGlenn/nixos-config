@@ -45,7 +45,7 @@
     sync_to = [
       "phone"
       "peregrine"
-      "pi"
+      "swallow"
     ];
   };
 

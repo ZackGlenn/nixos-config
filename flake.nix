@@ -25,10 +25,10 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Declarative partitioning and formatting
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
+
+    # Raspberrypi infrastructure
+    nixos-raspberrypi = {
+      url = "github:nvmd/nixos-raspberrypi";
     };
 
     #
@@ -117,7 +117,7 @@
       #
       # ========= Host Configurations =========
       #
-      nixosConfigurations = {
+      nixosConfigurations = with inputs; {
         # desktop
         peregrine = lib.nixosSystem {
           system = "x86_64-linux";
@@ -133,11 +133,24 @@
         };
 
         # Raspberry Pi
-        pi = lib.nixosSystem {
+        swallow = nixos-raspberrypi.lib.nixosInstaller {
           system = "aarch64-linux";
-          modules = [ ./hosts/pi ];
-          specialARgs = { inherit inputs outputs; };
+          modules = [ ./hosts/swallow ];
+          specialArgs = { inherit inputs outputs; };
         };
       };
     };
+
+  #
+  # ========= Nix Configuration =========
+  #
+  # Binary cache for the raspberrypi flake
+  nixConfig = {
+    extra-substituters = [
+      "https://nixos-raspberrypi.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nixos-raspberrypi.cachix.org-1:4iMO9LXa8BqhU+Rpg6LQKiGa2lsNh/j2oiYLNOQ5sPI="
+    ];
+  };
 }
