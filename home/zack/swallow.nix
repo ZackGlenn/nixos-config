@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
   imports = [
     # ========= Required Configs =========
@@ -11,4 +11,3 @@
     ./common/optional/sops.nix
   ];
 }
-

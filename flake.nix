@@ -8,7 +8,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # The next two inputs are for pinning to stable or unstable regardless of what the main input is set to
     # This is useful to keep some packages on stable while testing a beta release of nixpkgs
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     hardware.url = "github:nixos/nixos-hardware";
@@ -29,6 +29,7 @@
     # Raspberrypi infrastructure
     nixos-raspberrypi = {
       url = "github:nvmd/nixos-raspberrypi";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     #

@@ -29,6 +29,7 @@
     # ../common/optional/hyprlock.nix
     # ../common/optional/hyprland.nix
     ../common/optional/niri.nix
+    ../common/optional/nix-ld.nix
     ../common/optional/ydotool.nix
     ../common/optional/bluetooth.nix
     # ../common/optional/sddm.nix
