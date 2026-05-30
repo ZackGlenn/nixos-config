@@ -32,9 +32,10 @@
     ../common/optional/networkmanager.nix
     ../common/optional/ssh.nix
     ../common/optional/steam.nix
+    ../common/optional/services/upower.nix
 
     # ========= Host-unique Configs =========
-    # ./nvidia.nix
+    ./nvidia.nix
 
     # ========= Users to Create =========
     ../common/users/zack

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.niri.settings = {
     # Window rules let you adjust behavior for individual windows.
     # Find more information on the wiki:
@@ -6,7 +7,15 @@
     window-rules = [
       {
         matches = [ { app-id = "Kenku FM"; } ];
-        default-column-width = { proportion = 0.5; };
+        default-column-width = {
+          proportion = 0.5;
+        };
+      }
+      {
+        matches = [ { app-id = "steam"; } ];
+        default-column-width = {
+          proportion = 0.5;
+        };
       }
     ];
   };
