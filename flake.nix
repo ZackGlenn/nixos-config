@@ -134,7 +134,7 @@
         };
 
         # Raspberry Pi
-        swallow = nixos-raspberrypi.lib.nixosInstaller {
+        swallow = nixos-raspberrypi.lib.nixosSystemFull {
           system = "aarch64-linux";
           modules = [ ./hosts/swallow ];
           specialArgs = { inherit inputs outputs; };
