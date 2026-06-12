@@ -8,6 +8,7 @@
         identityFile = "/home/zack/.ssh/id_zack";
       };
       "*" = {
+        identityFile = "/home/zack/.ssh/id_zack";
         forwardAgent = false;
         addKeysToAgent = "no";
         compression = false;
