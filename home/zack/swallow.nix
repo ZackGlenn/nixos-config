@@ -9,5 +9,6 @@
     ./common/optional/lazygit.nix
     ./common/optional/rink.nix
     ./common/optional/sops.nix
+    ./common/optional/ssh.nix
   ];
 }
