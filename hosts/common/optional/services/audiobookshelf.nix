@@ -25,12 +25,15 @@
           '';
         };
       };
-      enableACME = true;
+      useACMEHost = "emeraldbroam.freeddns.com";
     };
   };
 
   security.acme = {
     acceptTerms = true;
     defaults.email = "santhidenjoyer+acme@gmail.com";
+    certs."emeraldbroam.freeddns.com" = {
+      webroot = "/var/lib/acme/acme-challenge";
+    };
   };
 }
