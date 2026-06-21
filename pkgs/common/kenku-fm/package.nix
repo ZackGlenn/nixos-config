@@ -12,7 +12,6 @@
   alsa-lib,
   libudev-zero,
   at-spi2-atk,
-  at-spi2-core,
   cairo,
   cups,
   dbus,
@@ -23,16 +22,10 @@
   glib,
   gtk3,
   libX11,
-  libXScrnSaver,
-  libXcomposite,
-  libXcursor,
   libXdamage,
   libXext,
   libXfixes,
-  libXi,
   libXrandr,
-  libXrender,
-  libXtst,
   libxcb,
   nspr,
   nss,
@@ -60,11 +53,8 @@ let
   runtimeLibs = lib.makeLibraryPath [
     libGL
     libdrm
-    mesa
     alsa-lib
     libudev-zero
-    at-spi2-atk
-    at-spi2-core
     cairo
     cups
     dbus
@@ -74,18 +64,6 @@ let
     gdk-pixbuf
     glib
     gtk3
-    libX11
-    libXScrnSaver
-    libXcomposite
-    libXcursor
-    libXdamage
-    libXext
-    libXfixes
-    libXi
-    libXrandr
-    libXrender
-    libXtst
-    libxcb
     nspr
     nss
     pango
