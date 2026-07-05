@@ -1,3 +1,6 @@
 { pkgs, ... }: {
-  home.packages = [ pkgs.obsidian ];
+  programs.obsidian = {
+    enable = true;
+    cli.enable = true;
+  };
 }
