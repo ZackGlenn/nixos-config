@@ -62,6 +62,10 @@
             "TheVault" = {
               devices = sync_to;
               path = "/home/zack/Sync/TheVault/";
+              ignorePatterns = [
+                ".obsidian/workspace.json"
+                ".obsidian/workspace-mobile.json"
+              ];
             };
             "Passwords" = {
               devices = sync_to;
