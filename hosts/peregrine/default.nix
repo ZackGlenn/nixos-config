@@ -26,6 +26,7 @@
     ../common/optional/services/openrgb.nix
     ../common/optional/services/mySync.nix
     ../common/optional/services/printing.nix
+    ../common/optional/services/gvfs.nix
     # ../common/optional/hyprlock.nix
     # ../common/optional/hyprland.nix
     ../common/optional/niri.nix
