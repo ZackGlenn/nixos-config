@@ -31,9 +31,14 @@
         hotkey-overlay.title = "Run an Application: noctalia launcher";
       };
 
-      "Super+Alt+L" = lib.mkForce {
+      "XF86ScreenSaver" = lib.mkForce {
         action = spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock";
         hotkey-overlay.title = "Lock the Screen: noctalia";
+      };
+
+      "Super+Alt+L" = lib.mkForce {
+        action = spawn "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend";
+        hotkey-overlay.title = "Lock and Suspend : noctalia";
       };
 
       "Super+X" = lib.mkForce {

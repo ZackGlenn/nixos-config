@@ -19,7 +19,7 @@
       hotkey-overlay.title = "Run an Application: tofi";
     };
 
-    "Super+Alt+L" = {
+    "XF86ScreenSaver" = {
       action = spawn "swaylock";
       hotkey-overlay.title = "Lock the Screen: swaylock";
     };
