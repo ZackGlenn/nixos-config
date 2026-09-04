@@ -54,6 +54,15 @@
       hw = "https://wiki.hyprland.org/";
     };
     settings = {
+      fileselect = {
+        handler = "external";
+        single_file.command = [
+          "kitty"
+          "sh"
+          "-c"
+          "yazi --chooser-file {}"
+        ];
+      };
       colors.webpage.preferred_color_scheme = "dark";
       content = {
         blocking.enabled = true;
