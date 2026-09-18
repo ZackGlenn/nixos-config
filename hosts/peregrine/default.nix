@@ -19,7 +19,6 @@
     ../common/core
     ./hardware-configuration.nix
     ./lact.nix
-    ./realtek-8552CE-fix.nix
 
     # ========= Host-specific Optional Configs =========
     ../common/optional/services/pipewire.nix
