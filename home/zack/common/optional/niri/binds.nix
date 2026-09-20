@@ -2,7 +2,7 @@
 {
 
   # See https://github.com/sodiboo/niri-flake/blob/main/docs.md#programsnirisettingsbindsnameaction
-  wayland.windowManager.niri.settings.binds = with config.lib.niri.actions; {
+  wayland.windowManager.niri.settings.binds = {
     # show a list of important hotkeys
     "Mod+Shift+Slash".show-hotkey-overlay = { };
 
