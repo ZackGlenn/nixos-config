@@ -1,10 +1,10 @@
 { ... }:
 {
   wayland.windowManager.niri.settings = {
-    # spawn-at-startup._children = [
-    #   { spawn = [ "lxqt-policykit-agent" ]; }
-    #   { spawn = [ "kitty" ]; }
-    # ];
+    _children = [
+      { spawn-at-startup = "lxqt-policykit-agent"; }
+      { spawn-at-startup = "kitty"; }
+    ];
 
     hotkey-overlay = {
       # Uncomment this line to disable the "Important Hotkeys" pop-up at startup.

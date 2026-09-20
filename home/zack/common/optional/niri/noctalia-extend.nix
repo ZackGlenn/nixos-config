@@ -9,15 +9,13 @@
           { clip-to-geometry = true; }
         ];
       }
+      { spawn-at-startup = "noctalia-shell"; }
     ];
 
     debug = {
       honor-xdg-activation-with-invalid-serial = { };
     };
 
-    # spawn-at-startup._children = [
-    #   [ "noctalia-shell" ]
-    # ];
     binds = {
       "Mod+D" = lib.mkForce {
         spawn = [
