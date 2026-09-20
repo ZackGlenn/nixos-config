@@ -1,7 +1,6 @@
 { ... }:
 {
-  # See https://github.com/sodiboo/niri-flake/blob/main/docs.md#programsnirisettingsinputfocus-follows-mouseenable and following
-  programs.niri.settings.input = {
+  wayland.windowManager.niri.settings.input = {
     keyboard = {
       xkb = {
         # You can set rules, model, layout, variant and options.
@@ -17,7 +16,7 @@
       };
 
       # Enable numlock on startup, omitting this setting disables it.
-      numlock = true;
+      numlock = { };
     };
 
     # Next sections include libinput settings.
@@ -25,12 +24,12 @@
     # All commented-out settings here are examples, not defaults.
     touchpad = {
       # off = true;
-      tap = true;
+      tap = { };
       # dwt = true;
       # dwtp = true;
       # drag = false;
       # drag-lock = true;
-      natural-scroll = true;
+      natural-scroll = { };
       # accel-speed = 0.2
       # accel-profile = "flat"
       # scroll-method = "two-finger"
@@ -62,9 +61,6 @@
 
     # Focus windows and outputs automatically when moving the mouse into them.
     # Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    focus-follows-mouse = {
-      enable = true;
-      # max-scroll-amount = "0%";
-    };
+    focus-follows-mouse = { };
   };
 }

@@ -26,6 +26,12 @@
   home-manager.backupFileExtension = "hm-backup";
   home-manager.sharedModules = [ inputs.sops-nix.homeManagerModules.sops ];
 
+  # required bc of using HM as a nixos module so that portal definitions and DE provided configurations get linked
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
+
   nixpkgs = {
     overlays = [ outputs.overlays.default ];
     config = {

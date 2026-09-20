@@ -1,20 +1,10 @@
+{ ... }:
 {
-  lib,
-  pkgs,
-  ...
-}:
-{
-  programs.niri.settings = {
-    spawn-at-startup = [
-      { command = [ "lxqt-policykit-agent" ]; }
-      # { command = ["waybar"]; }
-      { command = [ "kitty" ]; }
-      # { command = ["qutebrowser" "--nowindow"]; } # autostart qb to improve time opening first window
-    ];
-
-    xwayland-satellite = {
-      enable = true;
-    };
+  wayland.windowManager.niri.settings = {
+    # spawn-at-startup._children = [
+    #   { spawn = [ "lxqt-policykit-agent" ]; }
+    #   { spawn = [ "kitty" ]; }
+    # ];
 
     hotkey-overlay = {
       # Uncomment this line to disable the "Important Hotkeys" pop-up at startup.

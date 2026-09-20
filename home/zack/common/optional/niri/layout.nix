@@ -3,7 +3,7 @@
   # Settings that influence how windows are positioned and sized.
   # Find more information on the wiki:
   # https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
-  programs.niri.settings.layout = {
+  wayland.windowManager.niri.settings.layout = {
     # Set gaps around windows in logical pixels.
     gaps = 10;
 
@@ -19,7 +19,7 @@
     empty-workspace-above-first = true;
 
     # You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
-    preset-column-widths = [
+    preset-column-widths._children = [
       # Proportion sets the width as a fraction of the output width, taking gaps into account.
       # For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
       # The default preset widths are 1/3, 1/2 and 2/3 of the output.
@@ -35,9 +35,9 @@
     # preset-window-heights = [];
 
     # You can change the default width of the new windows.
-    default-column-width = {
-      proportion = 0.5;
-    };
+    default-column-width._children = [
+      { proportion = 0.5; }
+    ];
     # If you leave the brackets empty, the windows themselves will decide their initial width.
     # default-column-width = {};
 
@@ -66,57 +66,13 @@
       # - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
       # Color of the ring on the active monitor.
-      active = {
-        color = "#7aa2f7";
-      };
+      active-color = "#7aa2f7";
 
       # Color of the ring on inactive monitors.
       #
       # The focus ring only draws around the active window, so the only place
       # where you can see its inactive-color is on other monitors.
-      inactive = {
-        color = "#505050";
-      };
-    };
-
-    # You can enable drop shadows for windows.
-    shadow = {
-      # Uncomment the next line to enable shadows.
-      # on = true;
-
-      # By default, the shadow draws only around its window, and not behind it.
-      # Uncomment this setting to make the shadow draw behind its window.
-      #
-      # Note that niri has no way of knowing about the CSD window corner
-      # radius. It has to assume that windows have square corners, leading to
-      # shadow artifacts inside the CSD rounded corners. This setting fixes
-      # those artifacts.
-      #
-      # However, instead you may want to set prefer-no-csd and/or
-      # geometry-corner-radius. Then, niri will know the corner radius and
-      # draw the shadow correctly, without having to draw it behind the
-      # window. These will also remove client-side shadows if the window
-      # draws any.
-      #
-      # draw-behind-window = true;
-
-      # You can change how shadows look. The values below are in logical
-      # pixels and match the CSS box-shadow properties.
-
-      # Softness controls the shadow blur radius.
-      softness = 30;
-
-      # Spread expands the shadow.
-      spread = 5;
-
-      # Offset moves the shadow relative to the window.
-      offset = {
-        x = 0;
-        y = 5;
-      };
-
-      # You can also change the shadow color and opacity.
-      color = "#0007";
+      inactive-color = "#505050";
     };
 
     # Struts shrink the area occupied by windows, similarly to layer-shell panels.

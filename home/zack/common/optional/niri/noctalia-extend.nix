@@ -1,49 +1,76 @@
 { config, lib, ... }:
 {
-  programs.niri.settings = {
+  wayland.windowManager.niri.settings = {
 
-    window-rules = [
+    _children = [
       {
-        geometry-corner-radius = {
-          top-left = 5.0;
-          top-right = 5.0;
-          bottom-left = 5.0;
-          bottom-right = 5.0;
-        };
+        window-rule._children = [
+          { geometry-corner-radius = 12; }
+          { clip-to-geometry = true; }
+        ];
       }
-      { clip-to-geometry = true; }
     ];
 
     debug = {
       honor-xdg-activation-with-invalid-serial = { };
     };
 
-    spawn-at-startup = [
-      { command = [ "noctalia-shell" ]; }
-    ];
-    binds = with config.lib.niri.actions; {
+    # spawn-at-startup._children = [
+    #   [ "noctalia-shell" ]
+    # ];
+    binds = {
       "Mod+D" = lib.mkForce {
-        action = spawn "noctalia-shell" "ipc" "call" "notifications" "dismissAll";
+        spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "notifications"
+          "dismissAll"
+        ];
       };
 
       "Mod+R" = lib.mkForce {
-        action = spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
-        hotkey-overlay.title = "Run an Application: noctalia launcher";
+        spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "launcher"
+          "toggle"
+        ];
+        _props.hotkey-overlay-title = "Run an Application: noctalia launcher";
       };
 
       "XF86ScreenSaver" = lib.mkForce {
-        action = spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock";
-        hotkey-overlay.title = "Lock the Screen: noctalia";
+        spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "lockScreen"
+          "lock"
+        ];
+        _props.hotkey-overlay-title = "Lock the Screen: noctalia";
       };
 
       "Super+Alt+L" = lib.mkForce {
-        action = spawn "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend";
-        hotkey-overlay.title = "Lock and Suspend : noctalia";
+        spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "sessionMenu"
+          "lockAndSuspend"
+        ];
+        _props.hotkey-overlay-title = "Lock and Suspend : noctalia";
       };
 
       "Super+X" = lib.mkForce {
-        action = spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle";
-        hotkey-overlay.title = "Toggle the session menu";
+        spawn = [
+          "noctalia-shell"
+          "ipc"
+          "call"
+          "sessionMenu"
+          "toggle"
+        ];
+        _props.hotkey-overlay-title = "Toggle the session menu";
       };
     };
 
