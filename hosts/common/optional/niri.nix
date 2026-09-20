@@ -5,6 +5,10 @@
     nautilus
   ];
 
+  programs.niri = {
+    enable = true;
+  };
+
   services.xserver = {
     enable = true;
     xkb = {

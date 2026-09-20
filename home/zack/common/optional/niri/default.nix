@@ -22,8 +22,4 @@
     ../tofipass.nix
     ./wpaperd.nix
   ];
-
-  wayland.windowManager.niri = {
-    enable = true;
-  };
 }
