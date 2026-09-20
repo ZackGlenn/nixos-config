@@ -14,6 +14,6 @@
   # systemd startup is no longer supported
   systemd.user.services.noctalia-shell = lib.mkForce { };
 
-  # noctalia brings it on notification system
+  # noctalia brings it's own notification system
   services.dunst.enable = lib.mkForce false;
 }
