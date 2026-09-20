@@ -2,7 +2,7 @@
 {
   programs.ssh = {
     enable = true;
-    matchBlocks = {
+    settings = {
       "github.com" = {
         user = "git";
         identityFile = "/home/zack/.ssh/id_zack";
