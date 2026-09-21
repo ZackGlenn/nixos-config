@@ -69,7 +69,7 @@
       spawn = [
         "wpctl"
         "set-volume"
-        "@DEFAULT_props.AUDIO_SINK@"
+        "@DEFAULT_AUDIO_SINK@"
         "0.1+"
       ];
       _props.allow-when-locked = true;
@@ -79,7 +79,7 @@
       spawn = [
         "wpctl"
         "set-volume"
-        "@DEFAULT_props.AUDIO_SINK@"
+        "@DEFAULT_AUDIO_SINK@"
         "0.1-"
       ];
       _props.allow-when-locked = true;
@@ -89,7 +89,7 @@
       spawn = [
         "wpctl"
         "set-mute"
-        "@DEFAULT_props.AUDIO_SINK@"
+        "@DEFAULT_AUDIO_SINK@"
         "toggle"
       ];
       _props.allow-when-locked = true;
@@ -99,7 +99,7 @@
       spawn = [
         "wpctl"
         "set-mute"
-        "@DEFAULT_props.AUDIO_SOURCE@"
+        "@DEFAULT_AUDIO_SOURCE@"
         "toggle"
       ];
       _props.allow-when-locked = true;
